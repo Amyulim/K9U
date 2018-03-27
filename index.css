@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Nunito:800|Open+Sans:400,700');
 h1,h2,h3,h4{
     font-family: 'Nunito', sans-serif;
 }
@@ -6,9 +6,14 @@ p{
     font-family: 'Open Sans', sans-serif;
 }
 #wrapper{
-    width: 750px;
-    height: 1334px;
+    width: 375px;
+    height: 667px;
     background-color: #64A4C3;
+}
+#wrapper2{
+    width: 375px;
+    height: 667px;
+    background-color: #FFDA6F;
 }
 #landingPage{
     width: 100%;
@@ -26,6 +31,9 @@ p{
 }
 button, input{
     font-size: 1rem;
+}
+a{
+    text-decoration: none;
 }
 #userN{
     width: 230px;
@@ -52,24 +60,139 @@ button, input{
     font-family: 'Open Sans', sans-serif;
     
 }
-#startB{
+.clickB{
     background-color: #2A81B9;
     color: white;
     width: 140px;
     height: 45px;
     border: none;
     border-radius: 80px;
+    margin: auto;
+    display: block;
+    margin-bottom: 0.6rem; 
+}
+#startB{
     position: absolute;
     top: 65%;
     left: 0;
     right: 0;
-    margin: auto;
 }
-#startB:hover{
+.clickB:hover{
     background-color: #ffffff;
-    color: #2A81B9;
-   
+    color: #2A81B9;  
 }
-@keyframes{
-    
+.title{
+    width: 100%;
+    height: 50px;
+    background-color: #D33737;
+    position: relative;
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 1.1rem;
+}
+.title p{
+    position: absolute;
+    top: -4px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#sizeC{
+    width: 85px;
+    height: auto;
+    margin: 2.5rem auto;
+}
+.sizeB{
+    width: 85px;
+    height: 85px;
+    background-color:#2A81B9; 
+    border: none;
+    border-radius: 15px;
+    font-size: 2.5rem;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    margin:1rem auto;
+    cursor: pointer;
+}
+.largeSL{
+    background-color: #1F3944;
+    background-image: url(SVG/locked.svg);
+    background-position: center;
+    background-size: auto 65%;
+    background-repeat: no-repeat;  
+}
+#dogC{
+    width: 120px;
+    height: auto;
+    margin: 3rem auto;
+}
+#shiba{
+    background-image: url(SVG/shibaIcon.svg);
+}
+#bulldog{
+    background-image: url(SVG/bulldogIcon.svg);
+}
+.dogType{
+    width: 120px;
+    height: 120px;
+    background-color:#64A4C3; 
+    border: none;
+    border-radius: 15px;
+    font-size: 2.5rem;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    margin:1rem auto;
+    cursor: pointer; 
+    background-position: center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+}
+#alert:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 9px solid transparent;
+	border-bottom-color: #ffffff;
+	border-top: 0;
+	margin-left: -9px;
+	margin-top: -9px;
+}
+#alert{
+    width: 230px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    height: 30px;
+	content: '';
+    position: relative;
+    bottom: 22.5%;
+    left: 0;
+    right: 0;
+    margin:auto;
+    font-size: 0.7rem;
+    text-align: center;
+/*
+    background-image: url(SVG/alert.svg);
+    background-size: 9% auto;
+    background-position: left;
+    background-repeat: no-repeat;
+*/
+}
+#alert p{
+    display: inline-block;
+    position: absolute;
+    top: -10%;
+    left: 10%;
+    right: 0;
+    bottom: 0;
+}
+#alert img{
+    position: absolute;
+    left: 4%;
+    top: 15%;
+    width: 20px;
+    display: inline-block;
 }
