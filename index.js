@@ -1,6 +1,6 @@
 
 var largeS= document.getElementById("largeS");
-largeS.addEventListener("click", function () {
+largeS.addEventListener("mouseenter", function () {
     largeS.innerText="";
     largeS.classList.add('largeSL')
     var alert = document.createElement("div");
