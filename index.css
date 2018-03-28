@@ -115,7 +115,11 @@ a{
     margin:1rem auto;
     cursor: pointer;
 }
-.largeSL{
+.sizeB:hover{
+    background-color: #1F3944;
+    color: white;
+}
+#largeS:hover{
     background-color: #1F3944;
     background-image: url(SVG/locked.svg);
     background-position: center;
@@ -132,6 +136,12 @@ a{
 }
 #bulldog{
     background-image: url(SVG/bulldogIcon.svg);
+}
+#pug{
+    background-image: url(SVG/pugIcon.svg);
+}
+#beagle{
+    background-image: url(SVG/beagleIcon.svg);
 }
 .dogType{
     width: 120px;
@@ -174,12 +184,6 @@ a{
     margin:auto;
     font-size: 0.7rem;
     text-align: center;
-/*
-    background-image: url(SVG/alert.svg);
-    background-size: 9% auto;
-    background-position: left;
-    background-repeat: no-repeat;
-*/
 }
 #alert p{
     display: inline-block;
@@ -195,4 +199,59 @@ a{
     top: 15%;
     width: 20px;
     display: inline-block;
+}
+.dogName{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    text-align: center;
+    align-content: center;
+    color: #D33737;
+}
+#backIcon{
+    width: 22px;
+    padding: 13px 15px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+#wrapper5{
+    width: 375px;
+    height: 667px;
+    margin: 0;
+    background-color: aliceblue;
+    position: relative;
+    top: 0;
+}
+#dogImg{
+    background-color: #FFDA6F;
+    width: 100%;
+    height: 36%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#dogN{
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: auto; 
+}
+#shibaStand{
+    width: 24%;
+    height: auto;
+    position: absolute;
+    top: 28%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#grass{
+    position: absolute;
+    bottom: -1%;
 }
