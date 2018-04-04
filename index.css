@@ -42,7 +42,7 @@ p{
     right: 0; 
 }
 button, input{
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 a{
     text-decoration: none;
@@ -75,13 +75,13 @@ a{
 .clickB{
     background-color: #2A81B9;
     color: white;
-    width: 140px;
-    height: 45px;
+    width: 175px;
+    height: 50px;
     border: none;
-    border-radius: 80px;
+    border-radius: 150px;
     margin: auto;
     display: block;
-    margin-bottom: 0.6rem; 
+    margin-bottom: 1rem; 
 }
 #startB{
     position: absolute;
