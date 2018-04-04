@@ -1,12 +1,21 @@
 @media only screen and (max-width :667px) and (min-width : 375px) and (-webkit-min-device-pixel-ratio:2){
     #wrapper{
-        width: 100%;
+        width: 100vw;
+        height: 667px;
     }
     #wrapper2{
         width: 100%:
     }
 }
 @import url('https://fonts.googleapis.com/css?family=Nunito:800|Open+Sans:400,700');
+@media only screen and (max-width : 1366px) and (min-width : 900px){
+        /* 2 tile */
+            .wrapper{
+            width:100%; 
+           
+            }
+   
+ 
 h1,h2,h3,h4{
     font-family: 'Nunito', sans-serif;
 }
@@ -14,7 +23,7 @@ p{
     font-family: 'Open Sans', sans-serif;
 }
 #wrapper{
-    width: 100%;
+    width: 375px;
     height: 667px;
     background-color: #64A4C3;
 }
@@ -262,4 +271,5 @@ a{
 #grass{
     position: absolute;
     bottom: -1%;
+}
 }
