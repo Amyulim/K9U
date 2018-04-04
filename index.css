@@ -126,6 +126,8 @@ a{
     color: white;
     margin:1rem auto;
     cursor: pointer;
+    text-align: center;
+    align-content: center;
 }
 .sizeB:hover{
     background-color: #1F3944;
@@ -269,11 +271,12 @@ a{
 }
 @media only screen and (max-width :667px) and (min-width : 100px) and (-webkit-min-device-pixel-ratio:2){
     #wrapper{
-        width: 100%;
+        width: 100vw;
         height: 667px;
     }
     #wrapper2{
-        width: 100%:
+        width: 100vw;
+        height: 667px;
     }
 
 }
