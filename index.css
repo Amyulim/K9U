@@ -1,3 +1,4 @@
+@media only screen and (max-width :667px) and (min-width : 375px) and (-webkit-min-device-pixel-ratio:2){
 @import url('https://fonts.googleapis.com/css?family=Nunito:800|Open+Sans:400,700');
 h1,h2,h3,h4{
     font-family: 'Nunito', sans-serif;
@@ -254,4 +255,5 @@ a{
 #grass{
     position: absolute;
     bottom: -1%;
+}
 }
