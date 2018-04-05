@@ -1,11 +1,13 @@
 
 var largeS= document.getElementById("largeS");
+
 largeS.addEventListener("mouseenter", function () {
     largeS.innerText="";
     var alert = document.createElement("div");
         alert.innerHTML="<img src='SVG/alert.svg'/> <p>Please finish S & M size breeds first</P>"
         alert.id="alert";
         document.getElementById("wrapper").appendChild(alert);
+//        setTimeout(function() { document.getElementById("wrapper").removeChild(alert)},2000);
 });
 document.getElementById("largeS").addEventListener("mouseleave", function () {
     document.getElementById("largeS").innerText="L";
@@ -33,9 +35,12 @@ document.getElementById("goType").addEventListener("click", function () {
         document.getElementById("goType").href="../4/4.html";
     } else {
         var alert = document.createElement("div");
-        alert.innerHTML="<p>You should choose one type</P>"
-        alert.id="alert";
-        document.getElementById("wrapper").appendChild(alert);
+                alert.innerHTML=" <img src='SVG/alert.svg'/> <p>You should choose one type</P>"
+                alert.id="alert";
+                document.getElementById("wrapper").appendChild(alert);
+                
+        setTimeout(function() { document.getElementById("wrapper").removeChild(alert)},1000);
+       
     }
     
 });

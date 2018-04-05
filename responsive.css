@@ -136,14 +136,14 @@ p,body{
 .clickB{
     background-color: #2A81B9;
     color: white;
-    width: 180px;
-    height: 70px;
+    width: 210px;
+    height: 60px;
     border: none;
-    border-radius: 130px;
+    border-radius: 160px;
     margin: auto;
     display: block;
     margin-bottom: 0.6rem; 
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 .clickB:hover{
     background-color: #ffffff;
@@ -256,7 +256,7 @@ a{
             }
             #startB{
                 margin-top: 3rem;
-                font-size: 1rem;
+                font-size: 1.2rem;
                 
             }
     

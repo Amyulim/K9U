@@ -14,18 +14,25 @@
 h1,h2,h3,h4{
     font-family: 'Nunito', sans-serif;
 }
-p{
+p, body{
     font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
 }
 #wrapper{
     width: 375px;
     height: 667px;
     background-color: #64A4C3;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 #wrapper2{
     width: 375px;
     height: 667px;
     background-color: #FFDA6F;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 #landingPage{
     width: 100%;
@@ -42,7 +49,7 @@ p{
     right: 0; 
 }
 button, input{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 a{
     text-decoration: none;
@@ -75,13 +82,34 @@ a{
 .clickB{
     background-color: #2A81B9;
     color: white;
-    width: 175px;
-    height: 50px;
+    width: 160px;
+    height: 45px;
     border: none;
     border-radius: 150px;
     margin: auto;
     display: block;
     margin-bottom: 1rem; 
+}
+.clickB:hover{
+    background-color: #ffffff;
+    color: #2A81B9;  
+}
+.clickB2{
+    font-size: 0.9rem;
+    background-color: #FFDA6F; 
+/*    border: 2px solid #7D995F;*/
+    color: #555;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 150px;
+    margin: auto;
+    display: block;
+    margin-bottom: 1rem; 
+}
+.clickB2:hover{
+    background-color: #7D995F;
+    color: #FFFFFF;  
 }
 #startB{
     position: absolute;
@@ -89,10 +117,7 @@ a{
     left: 0;
     right: 0;
 }
-.clickB:hover{
-    background-color: #ffffff;
-    color: #2A81B9;  
-}
+
 .title{
     width: 100%;
     height: 50px;
@@ -186,13 +211,13 @@ a{
 	margin-top: -9px;
 }
 #alert{
-    width: 230px;
+    width: 235px;
     background-color: #ffffff;
     border-radius: 6px;
     height: 30px;
 	content: '';
     position: relative;
-    bottom: 22.5%;
+    bottom: 25.5%;
     left: 0;
     right: 0;
     margin:auto;
@@ -203,13 +228,13 @@ a{
     display: inline-block;
     position: absolute;
     top: -10%;
-    left: 10%;
+    left: 13%;
     right: 0;
     bottom: 0;
 }
 #alert img{
     position: absolute;
-    left: 4%;
+    left: 3%;
     top: 15%;
     width: 20px;
     display: inline-block;
@@ -224,8 +249,8 @@ a{
     align-content: center;
     color: #D33737;
 }
-#backIcon{
-    width: 22px;
+.backIcon{
+    width: 20px;
     padding: 13px 15px;
     display: inline-block;
     position: absolute;
@@ -234,17 +259,17 @@ a{
 }
 #wrapper5{
     width: 375px;
-    height: 667px;
+    height: 680px;
     margin: 0;
-    background-color: aliceblue;
-    position: relative;
+    position: absolute;
+    left: 0;
     top: 0;
 }
 #dogImg{
     background-color: #FFDA6F;
     width: 100%;
     height: 36%;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
 }
@@ -256,6 +281,7 @@ a{
     right: 0;
     margin: auto; 
 }
+/*
 #shibaStand{
     width: 24%;
     height: auto;
@@ -265,9 +291,76 @@ a{
     right: 0;
     margin: auto;
 }
+*/
+#shibaH{
+    width: 18.7%;
+    height: auto;
+    position: absolute;
+    bottom: 47%;
+    left: 37%;
+    animation: nod 3s infinite;
+}
+@keyframes nod{
+    0% {transform:  rotate(0deg);}
+    50% {transform:  rotate(20deg); left:40.2%;}
+}
+#shibaB{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    bottom: 6%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 #grass{
     position: absolute;
     bottom: -1%;
+}
+.textBox #alertI{
+    width: 26px;
+    margin:0 3% 0% 1%;
+    height: auto;
+    display: inline-block;
+}
+.textBox p{
+    display: inline-block;
+}
+
+#money{
+    width: 110px;
+    height: auto;
+    margin: -6px auto 0px auto;
+}
+#bar{
+    width: 300px;
+    height: 40px;
+    margin: 4px auto 0 auto;
+}
+.textBox{
+    margin: auto;
+    width: 79%;
+    height: auto;
+    background-color: #F2F1F1;
+    font-size: 0.75rem;
+    padding: 0% 3%;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    display: block;
+}
+#nextInfo{
+    width: 20px;
+    padding: 0px 4px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 31%;
+}
+#buttonArea{
+    margin-top:1.5rem;
+}
+#dogName{
+    background-color: 
 }
 @media only screen and (max-width :667px) and (min-width : 100px) and (-webkit-min-device-pixel-ratio:2){
     #wrapper{
