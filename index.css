@@ -9,8 +9,7 @@
     }
 
 
-   
- 
+/*----------------------------------------------------------------*/
 h1,h2,h3,h4{
     font-family: 'Nunito', sans-serif;
 }
@@ -127,6 +126,24 @@ a{
     text-align: center;
     margin: 0;
     font-size: 1.1rem;
+}
+.titleG{
+    width: 100%;
+    height: 50px;
+    background-color: #7D995F;
+    position: relative;
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 1.1rem;
+}
+.titleG p{
+    position: absolute;
+    top: -4px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family:'Nunito', sans-serif;
 }
 .title p{
     position: absolute;
@@ -247,6 +264,8 @@ a{
     padding: 0;
     text-align: center;
     align-content: center;
+}
+#dogN{
     color: #D33737;
 }
 .backIcon{
@@ -347,7 +366,9 @@ a{
     margin-top: 0.5rem;
     border-radius: 10px;
     display: block;
+    line-height: 1.2rem;
 }
+
 #nextInfo{
     width: 20px;
     padding: 0px 4px;
@@ -359,9 +380,155 @@ a{
 #buttonArea{
     margin-top:1.5rem;
 }
-#dogName{
-    background-color: 
+
+.dogpad{
+    width: 16px;
+    margin: 0px 2px 0 2px;
+    padding-top: 0px;
+    padding-bottom: -8px;
 }
+.dogpadArea{
+    display: inline-block;
+    width: 130px;
+    margin-left: 12px;
+}
+.items{
+    width: 40%;
+    align-content: center;
+    margin: 10px auto;
+}
+.items img{
+    width: 33px;
+    margin: 0 6px;
+}
+#toy{
+    width: 27px;
+}
+#food{
+    width: 35px;
+}
+#eachItemImg{
+    width: 30%;
+    height: 30%;
+    margin: auto;
+}
+#item1{
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    padding-top: 10px; 
+}
+.itemB{
+    width:90%;
+    height: auto;
+}
+#itemsInfo{
+    
+}
+.itemsBox {
+    margin: auto;
+    width: 70%;
+    height: 45.6%;
+    background-color: #F2F1F1;
+    font-size: 0.75rem;
+    padding: 3% 3%;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    display: block;
+    text-align: justify;
+}
+.itemsBox p{
+    font-weight: 400;
+}
+.itemsBox h3, h2{
+    text-align: center;
+}
+#back{
+    width: 9%;
+    position: absolute;
+    z-index: 100;
+    top: 1%;
+    left: 2%;
+    opacity: 0.6;
+}
+#iconBoxBorder{
+    width: 60px;
+    margin: auto;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    top: 100%;
+    left: -60px;
+    transition: left 1s;
+}
+.iconBox{
+    width: 30px;
+    height:30px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 10px auto; 
+}
+.arrow{
+    width: 25px; 
+}
+#NextArrow{
+    position: absolute;
+    right: 2%;
+    top: 40%;
+}
+#PrevArrow{
+    position: absolute;
+    left: 2%;
+    top: 40%;
+    display: none;
+}
+#DogAnimaArea{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 233px;
+}
+#shibaRun{
+    width: 60%;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: jump 2s infinite, scales 2s infinite;
+    
+}
+#shibaTail{
+    width: 32%;
+    position: absolute;
+    top: -15%;
+    right: 10%;
+    animation: tail 1.5s ease-in-out infinite;
+    transform-origin: 20px 80% 300px;
+}
+#shibaShadow{
+    width: 50%;
+    position: absolute;
+    bottom: 7%;
+    left:0;
+    right: 0;
+    margin: auto;
+    opacity: 0.2;
+    animation: shadow 2s infinite;
+}
+@keyframes shadow{
+    50% {transform: scale(0.8); opacity:0.1};
+}
+@keyframes tail{
+    50% {transform: rotate(13deg)};
+}
+@keyframes jump{
+    50% {bottom:16%;}
+}
+@keyframes scales{
+    50%{transform: scale(1,0.95)}
+}
+
 @media only screen and (max-width :667px) and (min-width : 100px) and (-webkit-min-device-pixel-ratio:2){
     #wrapper{
         width: 100vw;
