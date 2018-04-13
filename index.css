@@ -120,37 +120,30 @@ a{
 .title{
     width: 100%;
     height: 50px;
-    background-color: #D33737;
     position: relative;
     color: white;
     text-align: center;
     margin: 0;
     font-size: 1.1rem;
-}
+} 
 .titleG{
     width: 100%;
     height: 50px;
-    background-color: #7D995F;
+    
     position: relative;
     color: white;
     text-align: center;
     margin: 0;
     font-size: 1.1rem;
 }
-.titleG p{
-    position: absolute;
-    top: -4px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    font-family:'Nunito', sans-serif;
-}
+
 .title p{
     position: absolute;
     top: -4px;
     left: 0;
     right: 0;
     bottom: 0;
+    font-family:'Nunito', sans-serif;
 }
 #sizeC{
     width: 85px;
@@ -256,14 +249,8 @@ a{
     width: 20px;
     display: inline-block;
 }
-.dogName{
-    width: 100%;
-    height: 20%;
-    position: absolute;
-    top: 0;
-    padding: 0;
-    text-align: center;
-    align-content: center;
+#dogName{
+    background-color: #7D995F;
 }
 #dogN{
     color: #D33737;
@@ -423,14 +410,18 @@ a{
     width:90%;
     height: auto;
 }
+#itemsInfo{
+    height: 45.6%;  
+    margin-top: 2rem;
+    }
 .itemsBox {
     margin: auto;
     width: 68%;
-    height: 45.6%;
     background-color: #F2F1F1;
     font-size: 0.75rem;
     padding: 3% 5%;
-    margin-top: 2rem;
+    margin-bottom: 1rem;
+    
     border-radius: 10px;
     display: block;
     text-align: justify;
@@ -662,8 +653,33 @@ a{
     align-content: center;
     text-align: center;
 }
-
-
+#redTitle{
+    background-color: #D33737;
+}
+#quizType h3{
+    display: inline-block;
+}
+#quizType{
+    width: 70%;
+    margin-left: 13%;
+    display: inline-block;
+}
+#quizProgress{
+    margin-left: 0.5rem;
+    width: 50%;
+    display: inline-block;
+}
+.circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 30px;
+}
+#quiz1{
+    background-color: #D33737;
+    
+}
 
 
 @media only screen and (max-width :667px) and (min-width : 100px) and (-webkit-min-device-pixel-ratio:2){

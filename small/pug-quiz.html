@@ -10,24 +10,30 @@
     <body>
         <div id="wrapper2">
             <a id="return" href="#"><img id="back" src="../SVG/menu.svg"></a>
-            <div id="dogName" class="title">
+            <div id="redTitle" class="title">
                 <div id="iconBoxBorder">
                     <div class="iconBox">
                         <a href="../index.html"><img src="../SVG/home.svg"></a>
                     </div>
                     <div class="iconBox">
-                        <a href="pug-info.html"><img src="../SVG/prev-page.svg"></a>
+                        <a href="pug-tutorial.html"><img src="../SVG/prev-page.svg"></a>
                     </div>
                 </div>
                 
-                <p><b>PUG</b></p>
+                <p><b>Quiz</b></p>
             </div>
-            <div class="icons">
-                <img id="house" src="../SVG/house-colored.svg" />
-                <img id="toy" src="../SVG/toys.svg" />
-                <img id="food" src="../SVG/food.svg" />
+            <div id="quizType">
+                <h3> - PUG</h3>
+                <div id="quizProgress">
+                    <div id="quiz1" class="circle"></div>
+                    <div id="quiz2" class="circle"></div>
+                    <div id="quiz3" class="circle"></div>
             </div>
-            <div  id="itemsInfo" class="itemsBox" >
+            </div>
+           
+            
+            
+            <div  id="QuizBox" class="itemsBox" >
                 <div id="eachItemImg">
                      <img src="../SVG/leash.svg" id="item1">
                 </div>
@@ -35,18 +41,15 @@
                 <h3 id ="itemsName">LEASH</h3>
                 <p id="itemsDetails">
                     Use this when taking your dog for a walk while you are still in the training process! This tool helps keep your dog close beside you at all times. 
-                    <br /><br />
-                    The Average walk mileage per week for Shiba Inu is <b>8 miles.</b>
-                    <br />
-                     
+                    <br /><br />  
                 </p>
             </div>
+            <div class="itemsBox"></div>
             <div id="PrevArrow"> <img class="arrow" src="../SVG/Gprev.svg"></div>
            
             <div id="NextArrow"><img class="arrow" src="../SVG/Gnext.svg"></div>
             
             <div id="DogAnimaArea">
-                <img id="grass" src="../SVG/grass.svg">
                 <img id="pugShadow" src="../SVG/pug-shadow.svg">
                 <div id="pugMove"> 
                     <img id="pugRLeg" src="../SVG/pug-rightleg.svg">
@@ -57,9 +60,7 @@
                 
                
             </div>
-            <div id="progressNum"><p>0</p></div>
-            <div id="progressNum2"><p>100</p></div>
-            <div id="progressBar"><div id="progress"></div></div>
+          
             
               
         
@@ -68,6 +69,6 @@
                 
            
 
-        <script src="pug-tutorial.js"></script>
+        <script src="pug-quiz.js"></script>
     </body>
 </html>
