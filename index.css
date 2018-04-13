@@ -238,6 +238,9 @@ a{
     width: 20px;
     display: inline-block;
 }
+#TdogName{
+    background-color: #7D995F;
+}
 #dogName{
     width: 100%;
     height: 20%;
