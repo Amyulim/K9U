@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:800|Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito:800,900|Open+Sans:300,400,600,700');
 @media only screen and (max-width : 1366px) and (min-width : 900px){
         /* 2 tile */
             .wrapper{
@@ -392,12 +392,13 @@ a{
     width: 130px;
     margin-left: 12px;
 }
-.items{
-    width: 40%;
+.icons{
+    width: 37.5%;
     align-content: center;
     margin: 10px auto;
+    padding-left: 5px;
 }
-.items img{
+.icons img{
     width: 33px;
     margin: 0 6px;
 }
@@ -422,23 +423,21 @@ a{
     width:90%;
     height: auto;
 }
-#itemsInfo{
-    
-}
 .itemsBox {
     margin: auto;
-    width: 70%;
+    width: 68%;
     height: 45.6%;
     background-color: #F2F1F1;
     font-size: 0.75rem;
-    padding: 3% 3%;
-    margin-top: 0.5rem;
+    padding: 3% 5%;
+    margin-top: 2rem;
     border-radius: 10px;
     display: block;
     text-align: justify;
 }
 .itemsBox p{
-    font-weight: 400;
+    font-weight: 600;
+    line-height: 1.2rem;
 }
 .itemsBox h3, h2{
     text-align: center;
@@ -469,16 +468,23 @@ a{
     margin: 10px auto; 
 }
 .arrow{
-    width: 25px; 
+    width: 25px;
+    margin: 2.5px 0px;
 }
 #NextArrow{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
     position: absolute;
-    right: 2%;
+    right: 0%;
     top: 40%;
 }
 #PrevArrow{
+    width: 30px;
+    height: 30px;
     position: absolute;
-    left: 2%;
+    padding: 5px;
+    left: 0%;
     top: 40%;
     display: none;
 }
@@ -496,7 +502,6 @@ a{
     right: 0;
     margin: auto;
     animation: jump 2s infinite, scales 2s infinite;
-    
 }
 #shibaTail{
     width: 32%;
@@ -528,13 +533,141 @@ a{
 @keyframes scales{
     50%{transform: scale(1,0.95)}
 }
+#progressNum{
+    font-family: 'Nunito', sans-serif; 
+    position: absolute;
+    color: cadetblue;
+    top: 12.4%;
+    left: 25%;
+    font-size: 0.9rem;
+}
+#progressNum2{
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    color:  cadetblue;
+    top: 12.4%;
+    right: 22%;
+    font-size: 0.9rem;
+}
+#progressBar{
+    height: 10px;
+    width: 150px;
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    left: 0%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: white;
+/*    border:2px solid #777;*/
+    overflow: hidden;
+    
+}
+#progress{
+    width: 30px;
+    height: 10px;
+    background-color: cadetblue;
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+}
+
+#pugMove{
+    width: 60%;
+    height: 63%;
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: move 3s infinite;
+}
+#pugRLeg{
+    width: 44%;
+    position: absolute;
+    bottom: 9.5%;
+    left: 2%;
+    transform-origin: bottom right;
+    animation: Rleg 3s infinite;
+}
+#pugLLeg{
+    width: 43%;
+    position: absolute;
+    bottom: 0%;
+    left: 15%;
+    animation: Lleg 3s infinite;
+    transform-origin: bottom right;
+}
+#pugFace2{
+    width:46%;
+    position: absolute;  
+    top: 16%;
+    left: 6%;
+    animation: headDown 3s infinite;
+    transform-origin: bottom center;
+}
+#pugBody2{
+    width: 70%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: bodyScale 3s infinite;
+}
+#pugShadow{
+    width: 58%;
+    position: absolute;
+    bottom: 11%;
+    left:20%;
+    opacity: 0.2;
+    animation: Pshadow 3s infinite;
+}
+@keyframes Pshadow {
+    50% {transform: scaleX(0.95); left:23%;}
+}
+@keyframes move{
+    50% {left:3%;}
+}
+@keyframes headDown {
+    30% {top: 22%;}
+    60% {top: 22%; transform: rotate(-10deg);}
+}
+@keyframes bodyScale {
+    50%{transform: scaleX(0.9);}
+}
+@keyframes Rleg{
+    50% {transform: rotate(2deg); left:3%;}
+}
+@keyframes Lleg{
+    50% {transform: rotate(5deg); left:10%;}
+}
+#goToQuiz{
+    background-color: #2A81B9;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 150px;
+    margin: auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#goToQuiz:hover{
+    background-color:#F2F1F1;
+    color: #2A81B9; 
+    border: 3px solid #2A81B9; 
+}
+#complete{
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
+
+
 
 @media only screen and (max-width :667px) and (min-width : 100px) and (-webkit-min-device-pixel-ratio:2){
     #wrapper{
-        width: 100vw;
-        height: 667px;
-    }
-    #wrapper2{
         width: 100vw;
         height: 667px;
     }

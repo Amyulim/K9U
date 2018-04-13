@@ -42,10 +42,19 @@ p,body{
     left: 0;
     color: white;
 }
-#HowToPlay{
+#howToPlay{
     background-color: #FFDA6F;
     top: -132px;
     right: 0;
+}
+#aboutPage ul{
+    font-size: 0.9rem;
+    text-align: left;
+    font-weight: 400;
+}
+#aboutPage i{
+    font-size: 0.9rem;
+    color:#D33737 ;
 }
 .menu{
     width:50%;
@@ -62,7 +71,7 @@ p,body{
 .menu:hover{
     color: white;
 }
-#menuImg{
+#questionMark{
     width: 30px;
     height: auto;
     margin: 5px;
@@ -82,6 +91,7 @@ p,body{
     right: 0;
     margin: auto;
     text-align: justify;
+    font-size: 0.9rem;
     border-radius: 10px;
     display: none;
     overflow: auto;
@@ -100,7 +110,7 @@ p,body{
     position: absolute;
     top: 1rem;
     right: 1rem;
-    z-index: 70;
+    z-index: 100;
 }
 #logo{
     width: 200px;

@@ -30,9 +30,9 @@ document.getElementById("mediumS").addEventListener("click", function () {
 })
 document.getElementById("goType").addEventListener("click", function () {
     if(clickS==1){
-        document.getElementById("goType").href="../3/3.html";
+        document.getElementById("goType").href="../small/small-dog.html";
     } else if(clickM==1){
-        document.getElementById("goType").href="../4/4.html";
+        document.getElementById("goType").href="../medium/medium-dog.html";
     } else {
         var alert = document.createElement("div");
                 alert.innerHTML=" <img src='SVG/alert.svg'/> <p>You should choose one type</P>"

@@ -1,0 +1,32 @@
+#pugH{
+    width: 22%;
+    height: auto;
+    position: absolute;
+    bottom: 44%;
+    left: 43%;
+    animation: nod 3s infinite;
+    transform-origin:40% 90%;
+}
+
+#pugB{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    bottom: 6%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#pugtail{
+    position: absolute;
+    width: 11%;
+    bottom: 26%;
+    left: 34%;
+    animation: nod 1s infinite;
+    transform-origin: bottom right;
+}
+
+@keyframes nod {
+    0% {transform:  rotate(0deg);}
+    50% {transform:  rotate(-20deg);}
+}
