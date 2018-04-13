@@ -126,23 +126,12 @@ a{
     margin: 0;
     font-size: 1.1rem;
 } 
-.titleG{
-    width: 100%;
-    height: 50px;
-    
-    position: relative;
-    color: white;
-    text-align: center;
-    margin: 0;
-    font-size: 1.1rem;
-}
-
 .title p{
     position: absolute;
-    top: -4px;
+    top:25%;
     left: 0;
     right: 0;
-    bottom: 0;
+    margin: auto;
     font-family:'Nunito', sans-serif;
 }
 #sizeC{
@@ -250,10 +239,17 @@ a{
     display: inline-block;
 }
 #dogName{
-    background-color: #7D995F;
-}
-#dogN{
+    width: 100%;
+    height: 20%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     color: #D33737;
+    align-content: center;
+    text-align: center;
 }
 .backIcon{
     width: 20px;
