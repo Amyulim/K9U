@@ -93,7 +93,7 @@ function slide() {
         item1.src = foodImages[5];
         complete.innerHTML="100%";
         itemName.innerHTML = "Tutorial Completed!";
-        itemDetails.innerHTML = "<a href='#'><button id='goToQuiz'>Quiz</button></a>";
+        itemDetails.innerHTML = "<a href='pug-quiz.html'><button id='goToQuiz'>Quiz</button></a>";
     }      
 }
 
