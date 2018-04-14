@@ -351,33 +351,41 @@ a{
     font-size: 0.75rem;
     padding: 0% 5%;
     margin-top: 0.5rem;
+    padding-bottom: 5px;
     border-radius: 10px;
     display: block;
     line-height: 1.2rem;
 }
 .infoTitle{
     width: auto;
-    margin-left: 5px;
-    margin-bottom: 10px;
+    margin: 0px 4px 9px 4px;
     height: auto;
     display: inline-block;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
 }
 #info2-lineHeight{
-    line-height: 1.4rem;
+    line-height: 1.5rem;
 }
 .info2{
     font-weight: 800;
     color: #569C9D;
     display: inline-block;
-    margin-top:-15px;
-    width: 40%;
+    margin-top:0px;
+    width: 55%;
     margin-left: 8px;
     height: auto;
-    
-     
 }
-
+.dogpad{
+    width: 16px;
+    margin: 0px 2px 0 2px;
+    padding-top: 0px;
+    padding-bottom: -8px;
+    
+}
+.dogpadArea{
+    line-height: 1rem;
+    padding-top: 0px;
+}
 #nextInfo{
     width: 20px;
     padding: 0px 4px;
@@ -388,17 +396,6 @@ a{
 }
 #buttonArea{
     margin-top:1.5rem;
-}
-.dogpad{
-    width: 16px;
-    margin: 0px 2px 0 2px;
-    padding-top: 0px;
-    padding-bottom: -8px;
-    
-}
-.dogpadArea{
-    line-height: 0.8rem;
-    margin-top: 0px;
 }
 .icons{
     width: 37.5%;
