@@ -9,15 +9,9 @@
     
     <body>
         <div id="wrapper2">
-            <a id="return" href="#"><img id="back" src="../SVG/menu.svg"></a>
+<!--            <a id="return" href="#"><img id="back" src="../SVG/menu.svg"></a>-->
             <div id="redTitle" class="title">
                 <div id="iconBoxBorder">
-                    <div class="iconBox">
-                        <a href="../index.html"><img src="../SVG/home.svg"></a>
-                    </div>
-                    <div class="iconBox">
-                        <a href="pug-tutorial.html"><img src="../SVG/prev-page.svg"></a>
-                    </div>
                 </div>
                 
                 <p><b>Quiz</b></p>
@@ -34,32 +28,31 @@
             
             
             <div  id="QuizBox" class="itemsBox" >
-                <div id="eachItemImg">
-                     <img src="../SVG/leash.svg" id="item1">
-                </div>
+                 <div id="eachItemImg">
+                   
+                 </div>
+                 <img src="../SVG/quiz-walking.svg" id="item1">
                 <h1 id="complete"></h1>
-                <h3 id ="itemsName">LEASH</h3>
-                <p id="itemsDetails">
-                    Use this when taking your dog for a walk while you are still in the training process! This tool helps keep your dog close beside you at all times. 
-                    <br /><br />  
+                <h3 id ="itemsName"></h3>
+                <p id="quizDescript">
+                   <b>Q1.</b> How long is the proper minutes of activity per day for pug?  
                 </p>
             </div>
-            <div class="itemsBox"></div>
-            <div id="PrevArrow"> <img class="arrow" src="../SVG/Gprev.svg"></div>
-           
-            <div id="NextArrow"><img class="arrow" src="../SVG/Gnext.svg"></div>
-            
-            <div id="DogAnimaArea">
-                <img id="pugShadow" src="../SVG/pug-shadow.svg">
-                <div id="pugMove"> 
-                    <img id="pugRLeg" src="../SVG/pug-rightleg.svg">
-                    <img id="pugLLeg" src="../SVG/pug-leftleg.svg">
-                    <img id="pugBody2"src="../SVG/pug-body2.svg">
-                    <img id="pugFace2" src="../SVG/pug-face2.svg">
-                </div>
-                
-               
+            <div class="itemsBox" id="firstAnswer"> 
+                <img id="answersCircle1" class="answersCircle" src="../SVG/answer-none-clicked.svg">
+                <div id="an1" class="answerLists">40 Minutes</div>
             </div>
+            <div class="itemsBox" id="secondAnswer"> 
+                <img id="answersCircle2" class="answersCircle" src="../SVG/answer-none-clicked.svg">
+                <div id="an2" class="answerLists">50 Minutes</div>
+            </div>
+            <div class="itemsBox" id="thirdAnswer"> 
+                <img id="answersCircle3" class="answersCircle" src="../SVG/answer-none-clicked.svg">
+                <div id="an3" class="answerLists">60 Minutes</div>
+            </div>
+            <a href="#" id="gotoLastpage"><button id="nextQuiz"><b>NEXT</b></button></a>
+    
+            
           
             
               
