@@ -9,7 +9,9 @@ h4{
     font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
-
+p{
+    font-family: 'Open Sans', sans-serif;
+}
 #wrapper{
     width: 375px;
     height: 667px;
@@ -26,8 +28,7 @@ h4{
     background-color: #F2F1F1;
     font-size: 0.8rem;
     padding: 3% 5%;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     border-radius: 10px;
     display: block;
     line-height: 1.2rem;
@@ -38,12 +39,10 @@ h4{
     color: white;
     margin-top:3rem;
 }
-p{
-    font-family: 'Open Sans', sans-serif;
-}
+
 #center2 {
     transform: translate(0%, 0%);
-    margin: 2rem 0;
+    margin: 1.5rem 0 1.7rem 0;
 }
 .pulse_fail {
     width: 150px;
