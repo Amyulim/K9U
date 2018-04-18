@@ -435,11 +435,11 @@ a{
 .itemsBox {
     margin: auto;
     width: 68%;
+    height: auto;
     background-color: #F2F1F1;
     font-size: 0.75rem;
     padding: 3% 5%;
     margin-bottom: 1rem;
-    
     border-radius: 10px;
     display: block;
     text-align: justify;
@@ -582,6 +582,7 @@ a{
     z-index: 100;
     position: absolute;
     bottom: 0;
+    transition: 1s;
 }
 
 #pugMove{
@@ -714,7 +715,12 @@ a{
     margin: 5px 0px 0px 10px;
     position: absolute;
 }
-
+.rightanswers{
+    width: 70%;
+    margin-left: 2.5rem;
+    font-size: 0.7rem;
+    color: #444;
+}
 #nextQuiz{
     font-size: 0.9rem;
     background-color: #7D995F; 

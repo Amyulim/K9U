@@ -9,8 +9,13 @@ h4{
     font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
+
 p{
     font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
 }
 #wrapper{
     width: 375px;
@@ -37,7 +42,7 @@ p{
 
 #passed {
     color: white;
-    margin-top:3rem;
+    margin-top:2rem;
 }
 
 #center2 {

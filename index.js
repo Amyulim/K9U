@@ -1,3 +1,7 @@
+var userInpt = document.getElementById("userN"),
+    RemeberUN = document.getElementById("checkbox");
+
+
 document.getElementById("questionMark").addEventListener("click", function () {
     document.getElementById("menuPage").style.display="block";
     document.getElementById("about").style.top="0";
@@ -26,3 +30,22 @@ document.getElementById("howToPlay").addEventListener("click", function () {
     document.getElementById("aboutPage").style.display="block";
     document.getElementById("content").innerHTML = "<h3> How to Play</h3> <b><i>Follow the step-by-step process to create a K9U account.</i></b><ul><li>Choose the size and breed you want to train.</li><br/> <li> Read through the specific information about the breed you chose. </li> <br/><li> After doggy simulation, you can take your quiz about the breed you chose. </li> <br/> <li>If you pass, we will certify you as a <b>master</b> of that breed. </li>"
 });
+var UserNList =[];
+document.getElementById("startB").addEventListener("click", function () {
+    
+    //save UserName to localStorage for lastpage
+    localStorage.setItem("userName",JSON.stringify(userInpt.value));
+    
+    
+    if(RemeberUN.checked == true ){
+        UserN = localStorage.getItem("userName");
+        UserNList = JSON.parse(UserN);
+        document.getElementById("userN").placeholder = UserNList;
+    }
+    
+});
+
+//previous User Name
+        UserN = localStorage.getItem("userName");
+        UserNList = JSON.parse(UserN);
+        document.getElementById("userN").placeholder = UserNList;

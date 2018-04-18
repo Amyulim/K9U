@@ -3,6 +3,7 @@ var NextArrow = document.getElementById("NextArrow"),
     item1 = document.getElementById("item1"),
     itemName =document.getElementById("itemsName"),
     itemDetails = document.getElementById("itemsDetails"),
+    infographic = document.getElementById("infograph1"),
     toy = document.getElementById("toy"),
     house = document.getElementById("house"),
     food = document.getElementById("food"),
@@ -15,6 +16,7 @@ var currentPosition = 0;
 var clicked = 0;
 var foodImages = ["../SVG/leash.svg","../SVG/comb.svg","../SVG/frisbee.svg", "../SVG/foodbag.svg", "../SVG/dogplate.svg", "../SVG/shiba-completed.svg"];
 var Cprogress = 30;
+var infoG = ["../SVG/walk-shiba.svg","../SVG/brush-frequency.svg","../SVG/shiba-activity.svg","../SVG/empty.svg"];
 
 
 function slide() {
@@ -27,8 +29,9 @@ function slide() {
         //change contents
         item1.src = foodImages[0];
         complete.innerHTML="";
-        itemName.innerHTML = "LEASH";
-        itemDetails.innerHTML =  "Use this when taking your dog for a walk while you are still in the training process! This tool helps keep your dog close beside you at all times.<br /><br />The Average walk mileage per week for Shiba Inu is <b>8 miles.</b><br />" ;
+        itemName.innerHTML = "WALKING";
+        itemDetails.innerHTML =  "Make sure let shiba Inu walk 8miles per week." ;
+        infographic.src = infoG[0];
         
     } else if(clicked == 1){
         //change top icons
@@ -40,7 +43,8 @@ function slide() {
         item1.src = foodImages[1];
         complete.innerHTML="";
         itemName.innerHTML = "BRUSH";
-        itemDetails.innerHTML = "Proper brushes for Shiba Inu are Slicker brush, comb, and nail clipper. Make sure brushing him weekly";
+        itemDetails.innerHTML = "Proper brushes for Shiba Inu are Slicker brush, comb, and nail clipper.";
+        infographic.src = infoG[1];
         
     } else if(clicked == 2) {
         //change top icons
@@ -53,7 +57,8 @@ function slide() {
         complete.innerHTML="";
         document.getElementById("eachItemImg").style.width = "38%";
         itemName.innerHTML = "TOYS";
-        itemDetails.innerHTML = "<b>60mins</b> are recommended acivities time per day.<br />Tennis Ball Rope Tug Frisbee";
+        itemDetails.innerHTML = "<b>60mins</b> are recommended acivities time per day.<br />";
+        infographic.src = infoG[2];
         
     } else if(clicked == 3) {
         //change top icons
@@ -65,7 +70,8 @@ function slide() {
         item1.src= foodImages[3];
         complete.innerHTML="";
         itemName.innerHTML = "FOOD";
-        itemDetails.innerHTML = "Like many dogs, Shiba Inus are especially attracted to meats and they love whole ingredients. Find the right dry kibble to suit this breed’s taste buds and be careful to not feed him/her too much as Shiba Inus are prone to gaining weight."
+        itemDetails.innerHTML = "Like many dogs, Shiba Inus are especially attracted to meats and they love whole ingredients. Find the right dry kibble to suit this breed's taste buds and be careful to not feed him/her too much as Shiba Inus are prone to gaining weight."
+        infographic.src = infoG[3];
         
     } else if(clicked == 4) {
         NextArrow.style.display="block";
@@ -80,6 +86,7 @@ function slide() {
         complete.innerHTML="";
         itemName.innerHTML = "FOOD CONSUMPTION";
         itemDetails.innerHTML = "<ul><li>CUPS PER DAY : 2 cups</li><li>DAILY COST : $1.2 - $1.4</li><li>MONTHLY COST : $34 - $45</li></ul>";
+        
         
     } else if(clicked == 5) {
         NextArrow.style.display="none";
