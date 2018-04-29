@@ -17,6 +17,23 @@ p, body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 }
+.wrapper{
+    width: 375px;
+    height: 667px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+.blue{
+    background-color: #64A4C3;
+}
+.yellow{
+    background-color: #FFDA6F;
+}
 #wrapper{
     width: 375px;
     height: 667px;
@@ -24,6 +41,7 @@ p, body{
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
 }
 #wrapper2{
     width: 375px;
@@ -117,7 +135,6 @@ a{
     left: 0;
     right: 0;
 }
-
 .title{
     width: 100%;
     height: 50px;
@@ -125,7 +142,7 @@ a{
     color: white;
     text-align: center;
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 } 
 .title p{
     position: absolute;
@@ -135,21 +152,58 @@ a{
     margin: auto;
     font-family:'Nunito', sans-serif;
 }
-#sizeC{
-    width: 85px;
+#gameGuide{
+    width: 53%;
     height: auto;
-    margin: 2.5rem auto;
+    padding: 1rem;
+    margin: 3rem auto 0 auto;
+    background-color:#FFFFFF; 
+    border-radius: 10px;
+    border-radius: 10px;
+    font-size:0.85rem;
+}
+#gameGuide:after {
+	content: '';
+	position: absolute;
+	top: 149px;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 9px solid transparent;
+	border-top-color: #ffffff;
+	margin-left: -12px;
+	margin-bottom: -12px;
+}
+#tab{
+    transform: rotate(180deg);
+    width: 80px;
+    height: auto;
+    align-content: center;
+    position: absolute;
+    top: 24%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: tab 2s infinite;
+}
+@keyframes tab{
+    50%{top:27%;opacity: 0.7;}
+}
+#sizeC{
+    width: 100px;
+    height: auto;
+    margin: 4.5rem auto 0rem auto;
 }
 .sizeB{
-    width: 85px;
-    height: 85px;
+    width: 100px;
+    height: 100px;
     background-color:#2A81B9; 
     border: none;
     border-radius: 15px;
     font-size: 2.5rem;
     font-family: 'Nunito', sans-serif;
     color: white;
-    margin:1rem auto;
+    margin: 2rem auto 1rem auto;
     cursor: pointer;
     text-align: center;
     align-content: center;
@@ -166,9 +220,9 @@ a{
     background-repeat: no-repeat;  
 }
 #dogC{
-    width: 120px;
+    width: 130px;
     height: auto;
-    margin: 3rem auto;
+    margin: 2.5rem auto;
 }
 #shiba{
     background-image: url(SVG/shibaIcon.svg);
@@ -183,15 +237,14 @@ a{
     background-image: url(SVG/beagleIcon.svg);
 }
 .dogType{
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     background-color:#64A4C3; 
     border: none;
     border-radius: 15px;
-    font-size: 2.5rem;
     font-family: 'Nunito', sans-serif;
     color: white;
-    margin:1rem auto;
+    margin:1.2rem auto;
     cursor: pointer; 
     background-position: center;
     background-size: auto 80%;
@@ -217,7 +270,7 @@ a{
     height: 30px;
 	content: '';
     position: relative;
-    bottom: 25.5%;
+    bottom: 0%;
     left: 0;
     right: 0;
     margin:auto;
@@ -255,26 +308,45 @@ a{
     align-content: center;
     text-align: center;
 }
-.backIcon{
-    width: 20px;
-    padding: 13px 15px;
-    display: inline-block;
+#backImg{
+    width: 100%;
+    height: auto;
     position: absolute;
-    top: 0;
-    left: 25%;
+    bottom: 0;
 }
-#wrapper5{
-    width: 375px;
-    height: 680px;
-    margin: 0;
+#ballAni{
+    width: 40px;
+    height: 35px;
     position: absolute;
-    left: 0;
+    right: -12%;
+    bottom: 3%;
+    animation: ball 12s infinite ease-in-out; 
+    animation-delay: 1s;
+}
+#ball{
+    width: 80%;
+    position: absolute;
     top: 0;
+    right: 0;
+    animation: rotateBall 3s infinite linear;
+}
+#ball-shadow{
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    left: -10%;
+}
+@keyframes ball{
+    50%{right:120%;}
+}
+@keyframes rotateBall{
+    from {transform: :rotate(0deg);}
+    to {transform: rotate(360deg);}
 }
 #dogImg{
     background-color: #FFDA6F;
     width: 100%;
-    height: 36%;
+    height: 250px;
     position: relative;
     top: 0;
     left: 0;
@@ -333,7 +405,7 @@ a{
     display: inline-block;
 }
 
-#money{
+#cost{
     width: 110px;
     height: auto;
     margin: -6px auto 0px auto;
@@ -454,13 +526,13 @@ a{
 #infograph1{
     margin-top: 0.5rem;
 }
-#back{
-    width: 9%;
+.back{
+    width: 15px;
     position: absolute;
     z-index: 100;
-    top: 1%;
-    left: 2%;
-    opacity: 0.6;
+    top: 1.7%;
+    left: 2.5%;
+    opacity: 0.9;
 }
 #iconBoxBorder{
     width: 60px;
@@ -507,7 +579,7 @@ a{
     position:absolute;
 }
 #shibaRun{
-    width: 60%;
+    width: 57%;
     position: absolute;
     bottom: 5%;
     left: 0;
@@ -584,7 +656,6 @@ a{
     bottom: 0;
     transition: 1s;
 }
-
 #pugMove{
     width: 60%;
     height: 63%;
@@ -698,6 +769,28 @@ a{
     background-color: #ccc;
     border-radius: 30px;
 }
+#money{
+    width: 90px;
+    height: auto;
+    height: auto;
+    display: inline-block;
+    margin: 50px 18px 20px 18px ;
+    animation: shaking 2s infinite ease-out;
+}
+#money2{
+    width: 90px;
+    height: auto;
+    height: auto;
+    display: inline-block;
+    margin: 30px 18px 20px 18px ;
+    animation: shaking 2s infinite ease-out;
+}
+@keyframes shaking {
+    50%{transform: scale(1.05) rotate(10deg);}
+}
+@keyframes big {
+    50%{transform: scale(1.05); opacity: 0.5}
+}
 #quiz1{
     background-color: #D33737;
 }
@@ -716,10 +809,11 @@ a{
     position: absolute;
 }
 .rightanswers{
-    width: 70%;
+    width: 80%;
     margin-left: 2.5rem;
     font-size: 0.7rem;
     color: #444;
+    text-align: left;
 }
 #nextQuiz{
     font-size: 0.9rem;
@@ -735,6 +829,21 @@ a{
     font-size: 1.1rem;
     display: none;
 }
+#thirdAnswer h2{
+    display: inline-block;
+    font-size:0.75rem;
+    margin:-7px 0 -7px 0;
+    font-family: 'open sans'!important;
+}
+#i{
+    font-size: 0.7rem;
+    color:#D33737;
+    line-height:0.5rem !important;
+}
+.rightAnswer{
+    
+}
+
 @media only screen and (max-width :667px) and (min-width : 100px) and (-webkit-min-device-pixel-ratio:2){
     #wrapper{
         width: 100vw;

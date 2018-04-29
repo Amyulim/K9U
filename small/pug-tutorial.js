@@ -20,6 +20,15 @@ var infoG = ["../SVG/activity-mod.svg","../SVG/brush-frequency.svg","../SVG/pug-
 var myItemsArray = ["WALKING","BRUSH", "ACTIVITY","FOOD","FOOD CONSUPMSION"];
 var clickedArray = ["WALKING"];
 
+function check() {
+    /* -1 == false : 즉 어레이안에 없음을 의미*/
+    if(clickedArray.indexOf(itemName.innerHTML) == -1) {
+        
+        clickedArray.push(itemName.innerHTML);
+        Cprogress += 30;
+        document.getElementById("progress").style.width = Cprogress + "px";
+    }
+}
 function slide() {
      if(clicked == 0){
         //change top icons
@@ -46,7 +55,7 @@ function slide() {
         item1.src = foodImages[1];
         complete.innerHTML="";
         itemName.innerHTML = "BRUSH";
-        itemDetails.innerHTML = "Proper brushes for Pug are Slicker Brush Scissors Nail Clipper";
+        itemDetails.innerHTML = "Proper brushes for Pug are <b>Slicker Brush Scissors Nail Clipper</b>";
         infographic.src = infoG[1];
         
     } else if(clicked == 2) {
@@ -73,7 +82,7 @@ function slide() {
         item1.src= foodImages[3];
         complete.innerHTML="";
         itemName.innerHTML = "FOOD";
-        itemDetails.innerHTML = "Never give your pug cooked bones, as they can break easily and damage your dog's internal organs. Raw edible bones should be size appropriate for your pug and their chewing and eating habits. It;s important to teach your pug to chew bones before swallowing so you may need to hold the bone while they eat to begin with in training processes."
+        itemDetails.innerHTML = "Never give your pug cooked bones, as they can break easily and damage your dog's internal organs. Raw edible bones should be size appropriate for your pug and their chewing and eating habits. It's important to teach your pug to chew bones before swallowing so you may need to hold the bone while they eat to begin with in training processes."
         infographic.src = infoG[3];
         
     } else if(clicked == 4) {
@@ -105,34 +114,26 @@ function slide() {
     }      
 }
 
-
+    
 NextArrow.addEventListener("click", function () {
     
-    //-1은 어레이에 그 아이템이 없음을 의미한다
-    
-    console.log(clickedArray);
-    
-    
-    
-    
-    console.log(Cprogress);
+    //console.log(clickedArray);
+    //console.log(Cprogress);
     
     clicked++;   
     PrevArrow.style.display="block";
     slide();
-    
-    if(clickedArray.indexOf(itemName.innerHTML) == -1) {
-        
-        clickedArray.push(itemName.innerHTML);
-        Cprogress += 30;
-        document.getElementById("progress").style.width = Cprogress + "px";
-    }
+    check()
      
 });
 
 PrevArrow.addEventListener("click", function() { 
     clicked--;
     slide()
+    check()
+    if(clicked == 0){
+        PrevArrow.style.display="none";
+    }
 });
 
 //When top icon clicked --> change slide contens and icon
@@ -152,22 +153,18 @@ house.addEventListener("click", function () {
     //change contents
     item1.src = foodImages[0];
     complete.innerHTML="";
-    itemName.innerHTML = "WALKING";
-    itemDetails.innerHTML="";
+    itemName.innerHTML = "WALKING"; 
     itemDetails.innerHTML =  "Use a leash when taking your dog for a walk while you are still in the training process! " ;
     infographic.src = infoG[0]
     
-    if(clickedArray.indexOf(itemName.innerHTML) == -1) {
-        
-        clickedArray.push(itemName.innerHTML);
-        Cprogress += 30;
-         document.getElementById("progress").style.width =  Cprogress + "px";
-    }
+    check()
 });
 
 toy.addEventListener("click", function (){
     
     clicked = 2;
+    
+    PrevArrow.style.display = "block";
     
     //change top icons
     house.src = "../SVG/house.svg";
@@ -182,17 +179,15 @@ toy.addEventListener("click", function (){
     itemDetails.innerHTML = "<b>40mins</b> are recommended acivities time per day.<br />";
     infographic.src = infoG[2];
     
-    if(clickedArray.indexOf(itemName.innerHTML) == -1) {
-        clickedArray.push(itemName.innerHTML);
-        Cprogress += 30;
-        document.getElementById("progress").style.width =  Cprogress + "px";
-    }
+    check()
 
 });
 
 food.addEventListener("click", function () {
     
     clicked = 3;
+    
+    PrevArrow.style.display = "block";
    
     //change top icons
     house.src = "../SVG/house.svg";
@@ -203,22 +198,9 @@ food.addEventListener("click", function () {
     item1.src= foodImages[3];
     complete.innerHTML="";
     itemName.innerHTML = "FOOD";
-    itemDetails.innerHTML = "Never give your pug cooked bones, as they can break easily and damage your dog's internal organs. Raw edible bones should be size appropriate for your pug and their chewing and eating habits. It;s important to teach your pug to chew bones before swallowing so you may need to hold the bone while they eat to begin with in training processes."
+    itemDetails.innerHTML = "Never give your pug cooked bones, as they can break easily and damage your dog's internal organs. Raw edible bones should be size appropriate for your pug and their chewing and eating habits. It's important to teach your pug to chew bones before swallowing so you may need to hold the bone while they eat to begin with in training processes."
     infographic.src = infoG[3];
     
-    if(clickedArray.indexOf(itemName.innerHTML) == -1) {
-        
-        clickedArray.push(itemName.innerHTML);
-        Cprogress += 30;
-        document.getElementById("progress").style.width =  Cprogress + "px";
-    }
-    
-});
-
-document.getElementById("return").addEventListener("click",function(){
-   document.getElementById("iconBoxBorder").style.left="0";
-    setTimeout(function(){
-        document.getElementById("iconBoxBorder").style.left = "-60px";
-    },2500);
+    check()
     
 });

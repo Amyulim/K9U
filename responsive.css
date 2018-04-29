@@ -10,9 +10,10 @@ p,body{
                 
 }
 #wrapper{
-    width:100%; 
-    height: auto;
+    width:100vw; 
+    height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 #menuPage{
     width:100%; 
@@ -35,6 +36,39 @@ p,body{
     margin: 0;
     padding: 0;
     z-index: 50;
+}
+#about-big{
+    display: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.3);
+    z-index:700;
+}
+.about-big h3{
+    font-size: 1.5rem;
+    text-align: center;
+    color:#D33737;
+}
+.about-big{
+    background-color:rgba(255,255,255,0.9);
+    width: 35%;
+    height: auto;
+    padding: 3%;
+    text-align: justify;
+    font-size: 1rem;
+    border-radius: 10px;
+    overflow: auto;
+    z-index: 700;
+}
+#left{
+    left: 7%;
+}
+#right{
+    right: 7%;
+    margin-bottom: 5rem;
 }
 #about{
     background-color: #D33737;
@@ -72,12 +106,20 @@ p,body{
     color: white;
 }
 #questionMark{
-    width: 30px;
+    width: 40px;
     height: auto;
     margin: 5px;
     position: absolute;
     top: 5px;
     right: 5px;
+}
+#questionMark2{
+    width: 40px;
+    height: auto;
+    margin: 5px;
+    position: absolute;
+    top: 50px;
+    left: 65%;
 }
 #aboutPage{
     background-color:rgba(255,255,255,0.8);
@@ -94,12 +136,12 @@ p,body{
     border-radius: 10px;
     display: none;
     overflow: auto;
-    z-index: 60;
+    z-index: 6000;
 }
 #aboutPage h3{
     text-align: center;
 }
-#close{
+.closeB{
     font-family: 'Nunito', sans-serif; 
     font-size: 1.7rem;
     border-radius: 20px;
@@ -111,12 +153,14 @@ p,body{
     right: 1rem;
     z-index: 100;
 }
+#close2{
+    display: none;
+}
 #logo{
     width: 200px;
     height: auto;
     margin: auto;
     margin-top: 5rem;
-    
 }
 #user{
     width: 280px;
@@ -173,6 +217,17 @@ a{
             #menu{
                 display: none;
             }
+            #questionMark{
+                display: none;
+            }
+            #about-big{
+                height: 100%;
+            }
+            .about-big{
+                position: absolute;
+                top:150px;
+            }
+            
            
         /* 2 tile */
 /*
@@ -225,6 +280,16 @@ a{
              #menu{
                 display: none;
              }
+             .about-big{
+                 width: 60%;
+                 margin: 3rem auto;
+                 font-size: 1rem;
+                 text-align: left;  
+                 position: none;
+             }
+             #questionMark{
+                 display: none;
+             }
        
       
     }
@@ -268,6 +333,18 @@ a{
                 font-size: 1.2rem;
                 
             }
+             #about-big{
+                 display: none;
+             }
+             #close2{
+                 display: none;
+             }
+             .about-big{
+                 display: none;
+             }
+             #questionMark2{
+                 display: none;
+             }
     
 }
     

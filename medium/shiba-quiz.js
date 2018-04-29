@@ -1,4 +1,4 @@
-var answerLists = ["40 Minutes","Slicker Brush, Scissors, Nail Clipper","<h2>$25 ~ $30</h2>"];
+var answerLists = ["60 Minutes","Slicker brush, Comb, Nail Clipper","<h2>$40 ~ $45</h2>"];
 var myanswerList = [];
 var display = document.getElementById("display"),
     item1 = document.getElementById("item1"),
@@ -109,9 +109,9 @@ nextQuiz.addEventListener("click", function () {
         quiz2.style.backgroundColor = "#D33737";
         
         item1.src="../SVG/quiz-brush.svg";
-        quizDes.innerHTML = "<b>Q2.</b> What types of brushes are suitable for pug? ";
+        quizDes.innerHTML = "<b>Q2.</b> What types of brushes are suitable for Shiba Inu? ";
 
-        an1.innerHTML = "Slicker Brush, comb, Nail Clipper";
+        an1.innerHTML = "Slicker brush, Comb, Nail Clipper";
         an2.innerHTML = "Slicker Brush, Scissors, Nail Clipper";
         an3.innerHTML = "Slicker Brush, Nail Clipper";
         
@@ -121,7 +121,7 @@ nextQuiz.addEventListener("click", function () {
         quiz3.style.backgroundColor = "#D33737";
         
         item1.src="../SVG/quiz-food.svg";
-        quizDes.innerHTML = "<b>Q3.</b> How much is the expected monthly food cost for pug? <br/><span id='i'><i>*click the money icons</i></span>";
+        quizDes.innerHTML = "<b>Q3.</b> How much is the expected monthly food cost for Shiba Inu? <br/><span id='i'><i>*click the money icons</i></span>";
         
         secondAnswer.style.display="none";
         thirdAnswer.style.display="none";
@@ -145,35 +145,29 @@ nextQuiz.addEventListener("click", function () {
             num2 += 5;
             console.log(num1);
             
-            an1.innerHTML = "<h2>$"+ parseInt(num1)+" ~ $"+parseInt(num2)+"</h2>";
-            
-          
+            an1.innerHTML = "<h2>$"+ parseInt(num1)+" ~ $"+parseInt(num2)+"</h2>"; 
         });
-          money2.addEventListener("click", function() {
+        money2.addEventListener("click", function() {
                 num1 -= 5;
                 num2 -= 5;
                 an1.innerHTML = "<h2>$"+ parseInt(num1)+" ~ $"+parseInt(num2)+"</h2>";
-            });
-        
+        });
     } else if(clickedNum == 3) {
-      
-         item1.src = "../SVG/quiz-100.svg";
-         quizDes.innerHTML = " <h3>You've finished Quiz !</h3> ";
-         document.getElementById("money").remove();
-         document.getElementById("money2").remove();
-         secondAnswer.style.display="block";
-         thirdAnswer.style.display="block";
-         answersCircle1.style.display="inline-block";
-         an1.innerHTML = "Q1. "
-         an2.innerHTML = "Q2. "
-         an3.innerHTML = "Q3. "
-       
-         rightanswer(0,an1,answersCircle1,firstAnswer,rightAnswer1);
-         rightanswer(1,an2,answersCircle2,secondAnswer,rightAnswer2);
-         rightanswer(2,an3,answersCircle3,thirdAnswer,rightAnswer3); 
-   
         
-//        console.log(total);
+        item1.src = "../SVG/quiz-100.svg";
+        quizDes.innerHTML = " <h3>You've finished Quiz !</h3> ";
+        document.getElementById("money").remove();
+        document.getElementById("money2").remove();
+        secondAnswer.style.display="block";
+        thirdAnswer.style.display="block";
+        answersCircle1.style.display="inline-block";
+        an1.innerHTML = "Q1. "
+        an2.innerHTML = "Q2. "
+        an3.innerHTML = "Q3. "
+       
+        rightanswer(0,an1,answersCircle1,firstAnswer,rightAnswer1);
+        rightanswer(1,an2,answersCircle2,secondAnswer,rightAnswer2);
+        rightanswer(2,an3,answersCircle3,thirdAnswer,rightAnswer3); 
         
         //based on correct answers, change image and go to the last page
         if(total == 0){

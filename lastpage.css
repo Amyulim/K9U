@@ -17,15 +17,19 @@ p{
 a{
     text-decoration: none;
 }
-#wrapper{
+.wrapper{
     width: 375px;
     height: 667px;
-    background-color: #2a81b9;
     position: absolute;
     top:0;
     left: 0;
 }
-
+.blue{
+    background-color: #2a81b9; 
+}
+.red{
+    background-color: #D33737;
+}
 .textBox{
     margin:0 auto;
     width: 70%;
@@ -80,16 +84,16 @@ a{
 @keyframes animate 
 {
     0% {
-        box-shadow: 0 0 0 3px rgba(255,112,88,0);
+        box-shadow: 0 0 0 3px rgba(255,200,111,0);
     }
      40% {
-        box-shadow: 0 0 0 9px rgba(255,112,88,.9);
+        box-shadow: 0 0 0 9px rgba(255,218,111,.9);
     }
      80% {
-        box-shadow: 0 0 0 4px rgba(255,112,88,.5);
+        box-shadow: 0 0 0 4px rgba(255,118,111,.5);
     }
      100% {
-        box-shadow: 0 0 0 2px rgba(255,112,88,0);
+        box-shadow: 0 0 0 2px rgba(255,118,111,0);
     }
 }
 

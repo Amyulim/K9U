@@ -17,8 +17,18 @@ var clicked = 0;
 var foodImages = ["../SVG/leash.svg","../SVG/comb.svg","../SVG/frisbee.svg", "../SVG/foodbag.svg", "../SVG/dogplate.svg", "../SVG/shiba-completed.svg"];
 var Cprogress = 30;
 var infoG = ["../SVG/walk-shiba.svg","../SVG/brush-frequency.svg","../SVG/shiba-activity.svg","../SVG/empty.svg"];
+var myItemsArray = ["WALKING","BRUSH", "ACTIVITY","FOOD","FOOD CONSUPMSION"];
+var clickedArray = ["WALKING"];
 
-
+function check() {
+    /* -1 == false : 즉 어레이안에 없음을 의미*/
+    if(clickedArray.indexOf(itemName.innerHTML) == -1) {
+        
+        clickedArray.push(itemName.innerHTML);
+        Cprogress += 30;
+        document.getElementById("progress").style.width = Cprogress + "px";
+    }
+}
 function slide() {
      if(clicked == 0){
         //change top icons
@@ -85,7 +95,7 @@ function slide() {
         item1.src = foodImages[4];
         complete.innerHTML="";
         itemName.innerHTML = "FOOD CONSUMPTION";
-        itemDetails.innerHTML = "<ul><li>CUPS PER DAY : 2 cups</li><li>DAILY COST : $1.2 - $1.4</li><li>MONTHLY COST : $34 - $45</li></ul>";
+        itemDetails.innerHTML = "<ul><li>CUPS PER DAY : 2 cups</li><li>DAILY COST : $1.2 - $1.4</li><li>MONTHLY COST : $40 - $45</li></ul>";
         
         
     } else if(clicked == 5) {
@@ -100,26 +110,27 @@ function slide() {
         item1.src = foodImages[5];
         complete.innerHTML="100%";
         itemName.innerHTML = "Tutorial Completed!";
-        itemDetails.innerHTML = "<a href='#'><button id='goToQuiz'>Quiz</button></a>";
+        itemDetails.innerHTML = "<a href='shiba-quiz.html'><button id='goToQuiz'>Quiz</button></a>";
     }    
 }
 
 
 NextArrow.addEventListener("click", function () {
     
-    document.getElementById("progress").style.width = 30+ Cprogress + "px";
-    Cprogress += 30;
-    console.log(Cprogress);
-    
     clicked++;   
     PrevArrow.style.display="block";
     slide();
+    check()
      
 });
 
 PrevArrow.addEventListener("click", function() { 
     clicked--;
     slide()
+    check()
+    if(clicked == 0){
+        PrevArrow.style.display="none";
+    }
 });
 
 //When top icon clicked --> change slide contens and icon
@@ -138,14 +149,22 @@ house.addEventListener("click", function () {
 
     //change contents
     item1.src = foodImages[0];
-    itemName.innerHTML = "LEASH";
-    itemDetails.innerHTML =  "Use this when taking your dog for a walk while you are still in the training process! This tool helps keep your dog close beside you at all times.<br /><br />The Average walk mileage per week for Shiba Inu is <b>8 miles.</b><br />" ;
+    complete.innerHTML="";
+    itemName.innerHTML = "WALKING";
+    itemDetails.innerHTML =  "Make sure let shiba Inu walk 8miles per week." ;
+    
+    infographic.src = infoG[0]
+    
+    
+    check()
     
 });
 
 toy.addEventListener("click", function (){
     
     clicked = 2;
+    
+    PrevArrow.style.display = "block";
     
     //change top icons
     house.src = "../SVG/house.svg";
@@ -154,9 +173,14 @@ toy.addEventListener("click", function (){
     
     //change contents
     item1.src = foodImages[2];
+    complete.innerHTML="";
     document.getElementById("eachItemImg").style.width = "38%";
     itemName.innerHTML = "TOYS";
     itemDetails.innerHTML = "<b>60mins</b> are recommended acivities time per day.<br />Tennis Ball Rope Tug Frisbee";
+    
+    infographic.src = infoG[2];
+    
+    check()
 
 });
 
@@ -166,6 +190,8 @@ toy.addEventListener("click", function (){
 food.addEventListener("click", function () {
     
     clicked = 3;
+    
+    PrevArrow.style.display = "block";
    
     //change top icons
     house.src = "../SVG/house.svg";
@@ -174,16 +200,13 @@ food.addEventListener("click", function () {
 
     //change contents
     item1.src= foodImages[3];
+    complete.innerHTML="";
     itemName.innerHTML = "FOOD";
     itemDetails.innerHTML = "Like many dogs, Shiba Inus are especially attracted to meats and they love whole ingredients. Find the right dry kibble to suit this breed’s taste buds and be careful to not feed him/her too much as Shiba Inus are prone to gaining weight."
+    infographic.src = infoG[3];
+    
+    check()
     
     
 });
 
-document.getElementById("return").addEventListener("click",function(){
-   document.getElementById("iconBoxBorder").style.left="0";
-    setTimeout(function(){
-        document.getElementById("iconBoxBorder").style.left = "-60px";
-    },2500);
-    
-});
