@@ -57,7 +57,7 @@ var UserNList =[];
 document.getElementById("startB").addEventListener("click", function () {
     
     //save UserName to localStorage for lastpage
-    
+    localStorage.setItem("userName",JSON.stringify(userInpt.value))
     
     if(RemeberUN.checked == true ){
         localStorage.setItem("userName",JSON.stringify(userInpt.value));

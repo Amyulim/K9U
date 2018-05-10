@@ -1,7 +1,7 @@
 var NextArrow = document.getElementById("NextArrow"),
     PrevArrow = document.getElementById("PrevArrow"),
     item1 = document.getElementById("item1"),
-    itemName =document.getElementById("itemsName"),
+    itemName = document.getElementById("itemsName"),
     itemDetails = document.getElementById("itemsDetails"),
     infographic = document.getElementById("infograph1"),
     toy = document.getElementById("toy"),
@@ -14,9 +14,9 @@ var NextArrow = document.getElementById("NextArrow"),
 
 var currentPosition = 0;
 var clicked = 0;
-var foodImages = ["../SVG/leash.svg","../SVG/comb.svg","../SVG/frisbee.svg", "../SVG/foodbag.svg", "../SVG/dogplate.svg", "../SVG/shiba-completed.svg"];
+var foodImages = ["../SVG/leash.svg", "../SVG/comb.svg","../SVG/frisbee.svg", "../SVG/foodbag.svg", "../SVG/dogplate.svg", "../SVG/pug-completed.svg"];
 var Cprogress = 30;
-var infoG = ["../SVG/activity-mod.svg","../SVG/brush-frequency.svg","../SVG/shiba-activity.svg","../SVG/empty.svg","../SVG/shiba-food-consumption.svg"];
+var infoG = ["../SVG/activity-mod.svg","../SVG/brush-frequency.svg","../SVG/shiba-activity.svg","../SVG/empty.svg","../SVG/beagle-food-consumption.svg"];
 var myItemsArray = ["WALKING","BRUSH", "ACTIVITY","FOOD","FOOD CONSUPMSION"];
 var clickedArray = ["WALKING"];
 
@@ -40,10 +40,12 @@ function slide() {
         item1.src = foodImages[0];
         complete.innerHTML="";
         itemName.innerHTML = "WALKING";
-        itemDetails.innerHTML =  "Make sure let shiba Inu walk 8miles per week." ;
+        itemDetails.innerHTML="";
+        itemDetails.innerHTML =  "Beagle loves to be able to explore the outdoors and follow his nose! " ;
         infographic.src = infoG[0];
         
     } else if(clicked == 1){
+        
         //change top icons
         house.src = "../SVG/house-colored.svg";
         toy.src = "../SVG/toys.svg";
@@ -53,7 +55,7 @@ function slide() {
         item1.src = foodImages[1];
         complete.innerHTML="";
         itemName.innerHTML = "BRUSH";
-        itemDetails.innerHTML = "Proper brushes for Shiba Inu are Slicker brush, comb, and nail clipper.";
+        itemDetails.innerHTML = "Proper brushes for Beagle are <b>Slicker Brush, and Nail Clipper</b>";
         infographic.src = infoG[1];
         
     } else if(clicked == 2) {
@@ -66,7 +68,7 @@ function slide() {
         item1.src = foodImages[2];
         complete.innerHTML="";
         document.getElementById("eachItemImg").style.width = "38%";
-        itemName.innerHTML = "TOYS";
+        itemName.innerHTML = "ACTIVITY";
         itemDetails.innerHTML = "<b>60mins</b> are recommended acivities time per day.<br />";
         infographic.src = infoG[2];
         
@@ -80,12 +82,11 @@ function slide() {
         item1.src= foodImages[3];
         complete.innerHTML="";
         itemName.innerHTML = "FOOD";
-        itemDetails.innerHTML = "Like many dogs, Shiba Inus are especially attracted to meats and they love whole ingredients. Find the right dry kibble to suit this breed's taste buds and be careful to not feed him/her too much as Shiba Inus are prone to gaining weight."
+        itemDetails.innerHTML = "While this is indeed referred to as food allergies, with most dogs with this issue will be allergic to triggers that are mixed into the food. The biggest culprits are artificial chemical additives such as coloring or flavoring. And the symptoms of this can be quite bad, since a Beagle will be ingesting the allergen daily. "
         infographic.src = infoG[3];
         
     } else if(clicked == 4) {
         NextArrow.style.display="block";
-        
         //change top icons
         house.src = "../SVG/house.svg";
         toy.src = "../SVG/toys.svg";
@@ -96,8 +97,7 @@ function slide() {
         complete.innerHTML="";
         itemName.innerHTML = "FOOD CONSUMPTION";
         itemDetails.innerHTML = "";
-        infographic.src = infoG[4]
-        
+        infographic.src = infoG[4];
         
     } else if(clicked == 5) {
         NextArrow.style.display="none";
@@ -111,13 +111,16 @@ function slide() {
         item1.src = foodImages[5];
         complete.innerHTML="100%";
         itemName.innerHTML = "Tutorial Completed!";
-        itemDetails.innerHTML = "<a href='shiba-quiz.html'><button id='goToQuiz'>Quiz</button></a>";
-        infographic.src = infoG[3]
-    }    
+        itemDetails.innerHTML = "<a href='beagle-quiz.html'><button id='goToQuiz'>Quiz</button></a>";
+        infographic.src = infoG[3];
+    }      
 }
 
-
+    
 NextArrow.addEventListener("click", function () {
+    
+    //console.log(clickedArray);
+    //console.log(Cprogress);
     
     clicked++;   
     PrevArrow.style.display="block";
@@ -137,7 +140,7 @@ PrevArrow.addEventListener("click", function() {
 
 //When top icon clicked --> change slide contens and icon
 house.addEventListener("click", function () {
-    
+     
     clicked = 0;
     
     //hide the prev arrow
@@ -152,14 +155,11 @@ house.addEventListener("click", function () {
     //change contents
     item1.src = foodImages[0];
     complete.innerHTML="";
-    itemName.innerHTML = "WALKING";
-    itemDetails.innerHTML =  "Make sure let shiba Inu walk 8miles per week." ;
-    
+    itemName.innerHTML = "WALKING"; 
+    itemDetails.innerHTML =  "Beagle loves to be able to explore the outdoors and follow his nose! " ;
     infographic.src = infoG[0]
     
-    
     check()
-    
 });
 
 toy.addEventListener("click", function (){
@@ -172,22 +172,18 @@ toy.addEventListener("click", function (){
     house.src = "../SVG/house.svg";
     toy.src = "../SVG/toys-colored.svg";
     food.src = "../SVG/food.svg";
-    
+
     //change contents
     item1.src = foodImages[2];
     complete.innerHTML="";
     document.getElementById("eachItemImg").style.width = "38%";
-    itemName.innerHTML = "TOYS";
-    itemDetails.innerHTML = "<b>60mins</b> are recommended acivities time per day.<br />Tennis Ball Rope Tug Frisbee";
-    
+    itemName.innerHTML = "ACTIVITY";
+    itemDetails.innerHTML = "<b>60mins</b> are recommended acivities time per day.<br />";
     infographic.src = infoG[2];
     
     check()
 
 });
-
-
-
 
 food.addEventListener("click", function () {
     
@@ -204,11 +200,9 @@ food.addEventListener("click", function () {
     item1.src= foodImages[3];
     complete.innerHTML="";
     itemName.innerHTML = "FOOD";
-    itemDetails.innerHTML = "Like many dogs, Shiba Inus are especially attracted to meats and they love whole ingredients. Find the right dry kibble to suit this breed's taste buds and be careful to not feed him/her too much as Shiba Inus are prone to gaining weight."
+    itemDetails.innerHTML = "While this is indeed referred to as food allergies, with most dogs with this issue will be allergic to triggers that are mixed into the food. The biggest culprits are artificial chemical additives such as coloring or flavoring. And the symptoms of this can be quite bad, since a Beagle will be ingesting the allergen daily."
     infographic.src = infoG[3];
     
     check()
     
-    
 });
-

@@ -1,6 +1,6 @@
-var answerLists = ["60 Minutes","Slicker brush, Comb, Nail Clipper,","<h2>$40 ~ $45</h2>"];
+var answerLists = ["30 Minutes","","<h2>$45 ~ $50</h2>"];
 var myanswerList = [];
-var brushAnswer = ["Comb", "Nail Clipper", "Sliker brush"];
+var brushAnswer = ["Comb", "Nail Clipper", "Pin brush"];
 var mybrushAnswer = [];
 var display = document.getElementById("display"),
     item1 = document.getElementById("item1"),
@@ -124,7 +124,7 @@ nextQuiz.addEventListener("click", function () {
                 mybrushAnswer.push("Sliker brush")
                 
             }if(brush5Clicked == 1){
-                mybrushAnswer.push("brush")
+                mybrushAnswer.push("Pin brush")
             }
             
         }
@@ -191,13 +191,6 @@ nextQuiz.addEventListener("click", function () {
             if(brush1Clicked == 2){
                 brush1Clicked = 0;
             }
-
-//            if(brush1Clicked ==1 ){
-//                brush1.src="../SVG/comb2.svg";
-//            } else if(brush1Clicked ==2){
-//                brush1.src="../SVG/comb2-grey.svg";
-//                brush1Clicked = 0;
-//            }
             
         });
         
@@ -205,7 +198,7 @@ nextQuiz.addEventListener("click", function () {
             brush2Clicked ++;
             
             brushes(brush2Clicked, brush2,"../SVG/nail-clipper.svg","../SVG/nail-clipper-grey.svg")
-            if(brush2Clicked == 2){
+            if(brush2Clicked ==2){
                 brush2Clicked = 0;
             }
         });
@@ -214,7 +207,7 @@ nextQuiz.addEventListener("click", function () {
             brush3Clicked ++;
             
             brushes(brush3Clicked, brush3,"../SVG/scissors.svg","../SVG/scissors-grey.svg")
-            if(brush3Clicked ==2){
+            if(brush3Clicked == 2){
                 brush3Clicked = 0;
             }
         });
@@ -230,6 +223,7 @@ nextQuiz.addEventListener("click", function () {
         
         brush5.addEventListener("click", function() {
             brush5Clicked ++;
+            
             brushes(brush5Clicked, brush5,"../SVG/brush.svg","../SVG/brush-grey.svg")
             if(brush5Clicked == 2){
                 brush5Clicked = 0;
@@ -248,7 +242,7 @@ nextQuiz.addEventListener("click", function () {
         quiz3.style.backgroundColor = "#D33737";
         
         item1.src="../SVG/quiz-food.svg";
-        quizDes.innerHTML = "<b>Q3.</b> How much is the expected monthly food cost for Shiba Inu? <br/><span id='i'><i>*click the money icons</i></span>";
+        quizDes.innerHTML = "<b>Q3.</b> How much is the expected monthly food cost for Bulldog? <br/><span id='i'><i>*click the money icons</i></span>";
         
         secondAnswer.style.display="none";
         thirdAnswer.style.display="none";
@@ -295,7 +289,6 @@ nextQuiz.addEventListener("click", function () {
         an3.innerHTML = "Q3. "
        
         rightanswer(0,an1,answersCircle1,firstAnswer,rightAnswer1);
-//        rightanswer(1,an2,answersCircle2,secondAnswer,rightAnswer2);
         brushrightanswer()
         rightanswer(2,an3,answersCircle3,thirdAnswer,rightAnswer3); 
         
@@ -330,7 +323,7 @@ function brushes(a,b,c,d){
         b.src=c;
         b.style.transform="scale(1.2)"
         b.style.animation = "none";
-    } else if(a ==2){
+    } else if(a == 2){
         b.src = d;
         b.style.transform="scale(1)"
         b.style.animation = "big 2s infinite";

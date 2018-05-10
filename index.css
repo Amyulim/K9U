@@ -363,28 +363,122 @@ a{
     right: 0;
     margin: auto; 
 }
-/*
-#shibaStand{
-    width: 24%;
+#pugH{
+    width: 22%;
     height: auto;
     position: absolute;
-    top: 28%;
+    bottom: 44%;
+    left: 43%;
+    animation: Pug-nod 3s infinite;
+    transform-origin:40% 90%;
+}
+
+#pugB{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    bottom: 6%;
     left: 0;
     right: 0;
     margin: auto;
 }
-*/
+#pugtail{
+    position: absolute;
+    width: 11%;
+    bottom: 26%;
+    left: 34%;
+    animation: Pug-nod 1s infinite;
+    transform-origin: bottom right;
+}
+#beagleH{
+    width: 24%;
+    height: auto;
+    position: absolute;
+    bottom: 43%;
+    left: 43%;
+    animation: Pug-nod 3s infinite;
+    transform-origin:40% 90%;
+}
+#beagleB{
+    width: 23.5%;
+    height: auto;
+    position: absolute;
+    bottom: 6%;
+    left: 41%;
+}
+#beagle-tail{
+    position: absolute;
+    width: 7.5%;
+    bottom: 18%;
+    left: 38%;
+    animation: Pug-nod 1s infinite;
+    transform-origin: bottom right;
+}
+#beagle-body2{
+    width: 42%;
+    position: absolute;
+    bottom: 9%;
+    left:30%;
+}
+#beagle-face{
+    width:20%;
+    height: 80px;
+    position:absolute;
+    left: 59%;
+    top:5%;
+    transform-origin: bottom center;
+    animation: beagle-nod 2s infinite;
+}
+#beagle-head2{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#beagle-ear{
+    width: 33%;
+    position: absolute;
+    top: 7%;
+    left:-11%;
+    transform-origin: top right;
+    animation: beagle-ear 2s infinite;
+}
+#beagle-tail2{
+    width: 16%;
+    position: absolute;
+    left: 22%;
+    bottom: 46%;
+    transform-origin: bottom right;
+    animation: Pug-nod 1s infinite;
+}
+#beagle-shadow{
+    width: 45%;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 5%;
+    left: 28%;
+}
+@keyframes Pug-nod {
+    50% {transform:  rotate(-20deg);}
+}
+@keyframes beagle-nod {
+    50% {transform:  rotate(10deg);}
+}
+@keyframes beagle-ear {
+    50% {transform:  rotate(5deg);}
+}
+
 #shibaH{
     width: 18.7%;
     height: auto;
     position: absolute;
     bottom: 47%;
     left: 37%;
-    animation: nod 3s infinite;
+    animation: Shiba-nod 3s infinite;
+    transform-origin: bottom right;
 }
-@keyframes nod{
-    0% {transform:  rotate(0deg);}
-    50% {transform:  rotate(20deg); left:40.2%;}
+@keyframes Shiba-nod{
+    50% {transform:  rotate(15deg);}
 }
 #shibaB{
     width: 25%;
@@ -440,11 +534,37 @@ a{
     left: 38px;
     top:27px;
 }
+#bulldog-head2{
+    width: 20%;
+    position: absolute;
+    top: 5%;
+    left:30%;
+    z-index: 200;
+    transform-origin: bottom center;
+    animation: bulldog-head 2s infinite;
+}
+#bulldog-body2{
+    width: 37%;
+    position: absolute;
+    bottom: 8%;
+    left: 27%;
+}
+#bulldogShadow{
+    width: 38%;
+    opacity: 0.3;
+    position: absolute;
+    left:26%;
+    bottom: 7%;
+    
+}
 @keyframes bulldog-ear{
     50%{transform: rotate(7deg)}
 }
 @keyframes bulldog-eyes{
     50%{transform:scale(1.05)};
+}
+@keyframes bulldog-head{
+    50%{transform: rotate(5deg)}
 }
 .textBox #alertI{
     width: 26px;

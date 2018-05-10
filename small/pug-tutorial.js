@@ -16,7 +16,7 @@ var currentPosition = 0;
 var clicked = 0;
 var foodImages = ["../SVG/leash.svg", "../SVG/comb.svg","../SVG/frisbee.svg", "../SVG/foodbag.svg", "../SVG/dogplate.svg", "../SVG/pug-completed.svg"];
 var Cprogress = 30;
-var infoG = ["../SVG/activity-mod.svg","../SVG/brush-frequency.svg","../SVG/pug-activity.svg","../SVG/empty.svg"];
+var infoG = ["../SVG/activity-mod.svg","../SVG/brush-frequency.svg","../SVG/pug-activity.svg","../SVG/empty.svg","../SVG/pug-food-consumption.svg"];
 var myItemsArray = ["WALKING","BRUSH", "ACTIVITY","FOOD","FOOD CONSUPMSION"];
 var clickedArray = ["WALKING"];
 
@@ -55,7 +55,7 @@ function slide() {
         item1.src = foodImages[1];
         complete.innerHTML="";
         itemName.innerHTML = "BRUSH";
-        itemDetails.innerHTML = "Proper brushes for Pug are <b>Slicker Brush Scissors Nail Clipper</b>";
+        itemDetails.innerHTML = "Proper brushes for Pug are <b>Slicker Brush, Scissors, Nail Clipper</b>";
         infographic.src = infoG[1];
         
     } else if(clicked == 2) {
@@ -96,7 +96,8 @@ function slide() {
         item1.src = foodImages[4];
         complete.innerHTML="";
         itemName.innerHTML = "FOOD CONSUMPTION";
-        itemDetails.innerHTML = "<ul><li>CUPS PER DAY : 1 cup1</li><li>DAILY COST : $1 - $1.1</li><li>MONTHLY COST : $25 - $30</li></ul>";
+        itemDetails.innerHTML = "";
+        infographic.src = infoG[4];
         
     } else if(clicked == 5) {
         NextArrow.style.display="none";
@@ -111,6 +112,7 @@ function slide() {
         complete.innerHTML="100%";
         itemName.innerHTML = "Tutorial Completed!";
         itemDetails.innerHTML = "<a href='pug-quiz.html'><button id='goToQuiz'>Quiz</button></a>";
+        infographic.src = infoG[3];
     }      
 }
 

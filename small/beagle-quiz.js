@@ -1,4 +1,4 @@
-var answerLists = ["40 Minutes","Slicker Brush, Scissors, Nail Clipper","<h2>$25 ~ $30</h2>"];
+var answerLists = ["60 Minutes","Slicker Brush and Nail Clipper","<h2>$25 ~ $30</h2>"];
 var myanswerList = [];
 var display = document.getElementById("display"),
     item1 = document.getElementById("item1"),
@@ -109,11 +109,11 @@ nextQuiz.addEventListener("click", function () {
         quiz2.style.backgroundColor = "#D33737";
         
         item1.src="../SVG/quiz-brush.svg";
-        quizDes.innerHTML = "<b>Q2.</b> What types of brushes are suitable for pug? ";
+        quizDes.innerHTML = "<b>Q2.</b> What types of brushes are suitable for Beagle? ";
 
-        an1.innerHTML = "Slicker Brush, comb, Nail Clipper";
-        an2.innerHTML = "Slicker Brush, Scissors, Nail Clipper";
-        an3.innerHTML = "Slicker Brush, Nail Clipper";
+        an1.innerHTML = "Slicker Brush and Nail Clipper";
+        an2.innerHTML = "Pin Brush, Scissors, and Nail Clipper";
+        an3.innerHTML = "Slicker Brush and Scissors";
         
     }else if(clickedNum == 2){
         

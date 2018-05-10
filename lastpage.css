@@ -30,7 +30,7 @@ a{
 .red{
     background-color: #D33737;
 }
-.textBox{
+#textBox{
     margin:0 auto;
     width: 70%;
     height: auto;
