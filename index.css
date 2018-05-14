@@ -1,21 +1,26 @@
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:800,900|Open+Sans:300,400,600,700');
+/*
 @media only screen and (max-width : 1366px) and (min-width : 900px){
-        /* 2 tile */
+         2 tile 
             .wrapper{
             width:100%; 
            
             }
     }
+*/
 
-
-/*----------------------------------------------------------------*/
+/*----------------------------- GENERAL SETTING -----------------------------*/
+/*---------------------------------------------------------------------------*/
 h1,h2,h3,h4{
     font-family: 'Nunito', sans-serif;
 }
 p, body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+}
+a{
+    text-decoration: none;
 }
 .wrapper{
     width: 375px;
@@ -35,27 +40,20 @@ p, body{
     background-color: #FFDA6F;
 }
 .blue{
-    background-color:#64A4C3 }
-/*
-#wrapper{
-    width: 375px;
-    height: 667px;
-    background-color: #64A4C3;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+    background-color:#64A4C3
 }
-*/
-#wrapper2{
-    width: 375px;
-    height: 667px;
-    background-color: #FFDA6F;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+.darkblue{
+    background-color: #2a81b9; 
 }
+.red{
+    background-color: #D33737;
+}
+button, input{
+    font-size: 1.1rem;
+}
+
+/*-------------------------------- ID SELETOR -------------------------------*/
+/*---------------------------------------------------------------------------*/
 #landingPage{
     width: 100%;
     height: 100%;
@@ -70,12 +68,7 @@ p, body{
     left: 0; 
     right: 0; 
 }
-button, input{
-    font-size: 1.1rem;
-}
-a{
-    text-decoration: none;
-}
+
 #userN{
     width: 230px;
     height: 45px;
@@ -101,25 +94,9 @@ a{
     font-family: 'Open Sans', sans-serif;
     
 }
-.clickB{
-    background-color: #2A81B9;
-    color: white;
-    width: 160px;
-    height: 45px;
-    border: none;
-    border-radius: 150px;
-    margin: auto;
-    display: block;
-    margin-bottom: 1rem; 
-}
-.clickB:hover{
-    background-color: #ffffff;
-    color: #2A81B9;  
-}
 .clickB2{
     font-size: 0.9rem;
     background-color: #FFDA6F; 
-/*    border: 2px solid #7D995F;*/
     color: #555;
     width: 150px;
     height: 40px;
@@ -132,12 +109,6 @@ a{
 .clickB2:hover{
     background-color: #7D995F;
     color: #FFFFFF;  
-}
-#startB{
-    position: absolute;
-    top: 65%;
-    left: 0;
-    right: 0;
 }
 .title{
     width: 100%;
@@ -190,9 +161,12 @@ a{
     margin: auto;
     animation: tab 2s infinite;
 }
+
 @keyframes tab{
     50%{top:27%;opacity: 0.7;}
 }
+/*---------------------------- SIZE & DOG ICON ------------------------------*/
+/*---------------------------------------------------------------------------*/
 #sizeC{
     width: 100px;
     height: auto;
@@ -312,6 +286,8 @@ a{
     align-content: center;
     text-align: center;
 }
+/*------------------- DOG HOUSE BACKGROUND FOR BREED PAGE -------------------*/
+/*---------------------------------------------------------------------------*/
 #backImg{
     width: 100%;
     height: auto;
@@ -363,6 +339,12 @@ a{
     right: 0;
     margin: auto; 
 }
+#grass{
+    position: absolute;
+    bottom: -1%;
+}
+/*----------------------------------- PUG -----------------------------------*/
+/*---------------------------------------------------------------------------*/
 #pugH{
     width: 22%;
     height: auto;
@@ -372,7 +354,6 @@ a{
     animation: Pug-nod 3s infinite;
     transform-origin:40% 90%;
 }
-
 #pugB{
     width: 25%;
     height: auto;
@@ -390,6 +371,79 @@ a{
     animation: Pug-nod 1s infinite;
     transform-origin: bottom right;
 }
+#pugMove{
+    width: 60%;
+    height: 63%;
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: move 3s infinite;
+}
+#pugRLeg{
+    width: 44%;
+    position: absolute;
+    bottom: 9.5%;
+    left: 2%;
+    transform-origin: bottom right;
+    animation: Rleg 3s infinite;
+}
+#pugLLeg{
+    width: 43%;
+    position: absolute;
+    bottom: 0%;
+    left: 15%;
+    animation: Lleg 3s infinite;
+    transform-origin: bottom right;
+}
+#pugFace2{
+    width:46%;
+    position: absolute;  
+    top: 16%;
+    left: 6%;
+    animation: headDown 3s infinite;
+    transform-origin: bottom center;
+}
+#pugBody2{
+    width: 70%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: bodyScale 3s infinite;
+}
+#pugShadow{
+    width: 58%;
+    position: absolute;
+    bottom: 11%;
+    left:20%;
+    opacity: 0.2;
+    animation: Pshadow 3s infinite;
+}
+@keyframes Pshadow {
+    50% {transform: scaleX(0.95); left:23%;}
+}
+@keyframes move{
+    50% {left:3%;}
+}
+@keyframes headDown {
+    30% {top: 22%;}
+    60% {top: 22%; transform: rotate(-10deg);}
+}
+@keyframes bodyScale {
+    50%{transform: scaleX(0.9);}
+}
+@keyframes Rleg{
+    50% {transform: rotate(2deg); left:3%;}
+}
+@keyframes Lleg{
+    50% {transform: rotate(5deg); left:10%;}
+}
+@keyframes Pug-nod {
+    50% {transform:  rotate(-20deg);}
+}
+/*---------------------------------- BEAGLE ---------------------------------*/
+/*---------------------------------------------------------------------------*/
 #beagleH{
     width: 24%;
     height: auto;
@@ -458,16 +512,15 @@ a{
     bottom: 5%;
     left: 28%;
 }
-@keyframes Pug-nod {
-    50% {transform:  rotate(-20deg);}
-}
+
 @keyframes beagle-nod {
     50% {transform:  rotate(10deg);}
 }
 @keyframes beagle-ear {
     50% {transform:  rotate(5deg);}
 }
-
+/*-------------------------------- SHIBA INU --------------------------------*/
+/*---------------------------------------------------------------------------*/
 #shibaH{
     width: 18.7%;
     height: auto;
@@ -477,9 +530,7 @@ a{
     animation: Shiba-nod 3s infinite;
     transform-origin: bottom right;
 }
-@keyframes Shiba-nod{
-    50% {transform:  rotate(15deg);}
-}
+
 #shibaB{
     width: 25%;
     height: auto;
@@ -489,10 +540,50 @@ a{
     right: 0;
     margin: auto;
 }
-#grass{
+#shibaRun{
+    width: 57%;
     position: absolute;
-    bottom: -1%;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: jump 2s infinite, scales 2s infinite;
 }
+#shibaTail{
+    width: 32%;
+    position: absolute;
+    top: -15%;
+    right: 10%;
+    animation: tail 1.5s ease-in-out infinite;
+    transform-origin: 20px 80% 300px;
+}
+#shibaShadow{
+    width: 50%;
+    position: absolute;
+    bottom: 7%;
+    left:0;
+    right: 0;
+    margin: auto;
+    opacity: 0.2;
+    animation: shadow 2s infinite;
+}
+@keyframes shadow{
+    50% {transform: scale(0.8); opacity:0.1};
+}
+@keyframes tail{
+    50% {transform: rotate(13deg)};
+}
+@keyframes jump{
+    50% {bottom:15%;}
+}
+@keyframes scales{
+    50%{transform: scale(1,0.95)}
+}
+@keyframes Shiba-nod{
+    50% {transform:  rotate(15deg);}
+}
+/*--------------------------------- BULLDOG ---------------------------------*/
+/*---------------------------------------------------------------------------*/
 #bulldog-Ani1{
     width: 47%;
     position:absolute;
@@ -566,6 +657,8 @@ a{
 @keyframes bulldog-head{
     50%{transform: rotate(5deg)}
 }
+/*--------------------------- TUTORIAL & QUIZ PAGE --------------------------*/
+/*---------------------------------------------------------------------------*/
 .textBox #alertI{
     width: 26px;
     margin:0 3% 0% 1%;
@@ -749,45 +842,7 @@ a{
     bottom: 0;
     position:absolute;
 }
-#shibaRun{
-    width: 57%;
-    position: absolute;
-    bottom: 5%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    animation: jump 2s infinite, scales 2s infinite;
-}
-#shibaTail{
-    width: 32%;
-    position: absolute;
-    top: -15%;
-    right: 10%;
-    animation: tail 1.5s ease-in-out infinite;
-    transform-origin: 20px 80% 300px;
-}
-#shibaShadow{
-    width: 50%;
-    position: absolute;
-    bottom: 7%;
-    left:0;
-    right: 0;
-    margin: auto;
-    opacity: 0.2;
-    animation: shadow 2s infinite;
-}
-@keyframes shadow{
-    50% {transform: scale(0.8); opacity:0.1};
-}
-@keyframes tail{
-    50% {transform: rotate(13deg)};
-}
-@keyframes jump{
-    50% {bottom:15%;}
-}
-@keyframes scales{
-    50%{transform: scale(1,0.95)}
-}
+
 #progressNum{
     font-family: 'Nunito', sans-serif; 
     position: absolute;
@@ -827,74 +882,7 @@ a{
     bottom: 0;
     transition: 1s;
 }
-#pugMove{
-    width: 60%;
-    height: 63%;
-    position: absolute;
-    bottom: 15%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    animation: move 3s infinite;
-}
-#pugRLeg{
-    width: 44%;
-    position: absolute;
-    bottom: 9.5%;
-    left: 2%;
-    transform-origin: bottom right;
-    animation: Rleg 3s infinite;
-}
-#pugLLeg{
-    width: 43%;
-    position: absolute;
-    bottom: 0%;
-    left: 15%;
-    animation: Lleg 3s infinite;
-    transform-origin: bottom right;
-}
-#pugFace2{
-    width:46%;
-    position: absolute;  
-    top: 16%;
-    left: 6%;
-    animation: headDown 3s infinite;
-    transform-origin: bottom center;
-}
-#pugBody2{
-    width: 70%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    animation: bodyScale 3s infinite;
-}
-#pugShadow{
-    width: 58%;
-    position: absolute;
-    bottom: 11%;
-    left:20%;
-    opacity: 0.2;
-    animation: Pshadow 3s infinite;
-}
-@keyframes Pshadow {
-    50% {transform: scaleX(0.95); left:23%;}
-}
-@keyframes move{
-    50% {left:3%;}
-}
-@keyframes headDown {
-    30% {top: 22%;}
-    60% {top: 22%; transform: rotate(-10deg);}
-}
-@keyframes bodyScale {
-    50%{transform: scaleX(0.9);}
-}
-@keyframes Rleg{
-    50% {transform: rotate(2deg); left:3%;}
-}
-@keyframes Lleg{
-    50% {transform: rotate(5deg); left:10%;}
-}
+
 #goToQuiz{
     background-color: #2A81B9;
     color: white;
@@ -939,28 +927,6 @@ a{
     height: 10px;
     background-color: #ccc;
     border-radius: 30px;
-}
-#money{
-    width: 90px;
-    height: auto;
-    height: auto;
-    display: inline-block;
-    margin: 50px 18px 20px 18px ;
-    animation: shaking 2s infinite ease-out;
-}
-#money2{
-    width: 90px;
-    height: auto;
-    height: auto;
-    display: inline-block;
-    margin: 30px 18px 20px 18px ;
-    animation: shaking 2s infinite ease-out;
-}
-@keyframes shaking {
-    50%{transform: scale(1.05) rotate(10deg);}
-}
-@keyframes big {
-    50%{transform: scale(1.05); opacity: 0.5}
 }
 #quiz1{
     background-color: #D33737;
@@ -1011,6 +977,32 @@ a{
     color:#D33737;
     line-height:0.5rem !important;
 }
+/*----------------------------- quiz-money part -----------------------------*/
+/*---------------------------------------------------------------------------*/
+#money{
+    width: 90px;
+    height: auto;
+    height: auto;
+    display: inline-block;
+    margin: 50px 18px 20px 18px ;
+    animation: shaking 2s infinite ease-out;
+}
+#money2{
+    width: 90px;
+    height: auto;
+    height: auto;
+    display: inline-block;
+    margin: 30px 18px 20px 18px ;
+    animation: shaking 2s infinite ease-out;
+}
+@keyframes shaking {
+    50%{transform: scale(1.05) rotate(10deg);}
+}
+@keyframes big {
+    50%{transform: scale(1.05); opacity: 0.5}
+}
+/*----------------------------- quiz-brush part -----------------------------*/
+/*---------------------------------------------------------------------------*/
 #brush1{
     display: inline-block;
     width: 25px;
@@ -1040,3 +1032,93 @@ a{
 @keyframes big {
     50%{transform: rotate(10deg)}
 }
+
+/*--------------------------------- Last page -------------------------------*/
+/*---------------------------------------------------------------------------*/
+#textBox{
+    margin:0 auto;
+    width: 70%;
+    height: auto;
+    background-color: #F2F1F1;
+    font-size: 0.8rem;
+    padding: 3% 5%;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    display: block;
+    line-height: 1.2rem;
+
+}
+#textBox h4{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+#textBox p{
+    font-weight: 400;
+}
+#passed {
+    color: white;
+    margin-top:2rem;
+    text-align: center;
+}
+#center2 {
+    transform: translate(0%, 0%);
+    margin: 1.5rem 0 1.7rem 0;
+}
+.pulse_fail {
+    width: 150px;
+    height: 150px;
+    margin:0 112.5px;
+    border-radius: 50%;
+    animation: animate 3s linear infinite;
+}
+.pulse_passed {
+    width: 150px;
+    height: 150px;
+    margin:0 112.5px;
+    border-radius: 50%;
+    animation: animate2 3s linear infinite;
+}
+#lastpage .clickB2:hover{
+    color:#FFDA6F;
+    background-color: rgba(0,0,0,0);
+    border: 2px solid #FFDA6F;
+}
+@keyframes animate 
+{
+    0% {
+        box-shadow: 0 0 0 3px rgba(255,200,111,0);
+    }
+     40% {
+        box-shadow: 0 0 0 9px rgba(255,218,111,.9);
+    }
+     80% {
+        box-shadow: 0 0 0 4px rgba(255,118,111,.5);
+    }
+     100% {
+        box-shadow: 0 0 0 2px rgba(255,118,111,0);
+    }
+}
+
+@keyframes animate2 
+{
+    0% {
+        box-shadow: 0 0 0 3px rgba(255,208,91,0);
+    }
+     40% {
+        box-shadow: 0 0 0 9px rgba(255,208,91,.9);
+    }
+     80% {
+        box-shadow: 0 0 0 4px rgba(255,208,91,.5);
+    }
+     100% {
+        box-shadow: 0 0 0 2px rgba(255,208,91,0);
+    }
+}
+
+
+
+
+
+
+
+

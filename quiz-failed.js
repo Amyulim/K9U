@@ -10,7 +10,7 @@ console.log(localStorage.getItem("userName"));
 //if(UserNList.length >-1){
 //    document.getElementById("passed").innerHTML =" You've passed the tutorial!";
 //} else{
-    document.getElementById("passed").innerHTML = "Great "+ UserNList + "<br/> You've passed the tutorial!";
+    document.getElementById("passed").innerHTML = "Uh-oh.. "+ UserNList + "<br/> you didn't pass the tutorial!!";
 //}
 
 document.getElementById("textBox").innerHTML = "<h4>Nice try! " + UserNList+ "</h4><p>It seems like you need to study some more about <b>"+DogType+".</b> Please go back to the tutorial to review the concepts again and retake the quiz.<br><br><b>Remember: If you pass the quiz, you'll become a master of "+DogType+"</b></p>"

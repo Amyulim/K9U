@@ -25,7 +25,7 @@ var display = document.getElementById("display"),
     num2 = 5;
 
  
-//If the user choose right answers, add total score and make result box green
+//If the user choose right answers, add 33 to the total score and make result box green
 //If not, don't add and make result box red
 function rightanswer(i,anNum,circle,box,rightanswerdiv) {
     if(myanswerList[i] == answerLists[i]){
@@ -53,7 +53,6 @@ function unclicked(unclick,undiv){
      unclick.src="../SVG/answer-none-clicked.svg";
      undiv.style.border = "none";
 }
-
 
 
 firstAnswer.addEventListener("click", function () { 
@@ -85,8 +84,9 @@ thirdAnswer.addEventListener("click", function () {
 });
 
 nextQuiz.addEventListener("click", function () {
+    
     clickedNum ++;
-    console.log(an);
+    //console.log(an);
     
     //push the clicked answer to array 
     if(an == 1){
@@ -105,6 +105,7 @@ nextQuiz.addEventListener("click", function () {
     
     //Go to the next Quiz
     if(clickedNum == 1){
+        
         //quiz progress - change circle color
         quiz2.style.backgroundColor = "#D33737";
         
@@ -123,10 +124,12 @@ nextQuiz.addEventListener("click", function () {
         item1.src="../SVG/quiz-food.svg";
         quizDes.innerHTML = "<b>Q3.</b> How much is the expected monthly food cost for pug? <br/><span id='i'><i>*click the money icons</i></span>";
         
+        //make answer boxes disapper except first one
         secondAnswer.style.display="none";
         thirdAnswer.style.display="none";
         answersCircle1.style.display="none";
         
+        //create image for money
         var money2 =document.createElement("img");
         var money =document.createElement("img");  
         
@@ -140,40 +143,42 @@ nextQuiz.addEventListener("click", function () {
 
         an1.innerHTML = "<h2 id='MyAnswerNum'>$"+ parseInt(num1)+" ~ $"+parseInt(num2)+"</h2>";
         
+        //when plus money clicked, add 
         money.addEventListener("click", function(){
             num1 += 5;
             num2 += 5;
             console.log(num1);
             
             an1.innerHTML = "<h2>$"+ parseInt(num1)+" ~ $"+parseInt(num2)+"</h2>";
-            
           
         });
-          money2.addEventListener("click", function() {
+        
+        //when minus money clicked, minus
+        money2.addEventListener("click", function() {
                 num1 -= 5;
                 num2 -= 5;
                 an1.innerHTML = "<h2>$"+ parseInt(num1)+" ~ $"+parseInt(num2)+"</h2>";
-            });
+        });
         
     } else if(clickedNum == 3) {
-      
-         item1.src = "../SVG/quiz-100.svg";
-         quizDes.innerHTML = " <h3>You've finished Quiz !</h3> ";
-         document.getElementById("money").remove();
-         document.getElementById("money2").remove();
-         secondAnswer.style.display="block";
-         thirdAnswer.style.display="block";
-         answersCircle1.style.display="inline-block";
-         an1.innerHTML = "Q1. "
-         an2.innerHTML = "Q2. "
-         an3.innerHTML = "Q3. "
-       
-         rightanswer(0,an1,answersCircle1,firstAnswer,rightAnswer1);
-         rightanswer(1,an2,answersCircle2,secondAnswer,rightAnswer2);
-         rightanswer(2,an3,answersCircle3,thirdAnswer,rightAnswer3); 
-   
+            
+        item1.src = "../SVG/quiz-100.svg";
+        quizDes.innerHTML = " <h3>You've finished Quiz !</h3> ";
+        document.getElementById("money").remove();
+        document.getElementById("money2").remove();
+
+        secondAnswer.style.display="block";
+        thirdAnswer.style.display="block";
+        answersCircle1.style.display="inline-block";
+        an1.innerHTML = "Q1. "
+        an2.innerHTML = "Q2. "
+        an3.innerHTML = "Q3. "
         
-//        console.log(total);
+        //compared user's answer array with correct answer array
+        rightanswer(0,an1,answersCircle1,firstAnswer,rightAnswer1);
+        rightanswer(1,an2,answersCircle2,secondAnswer,rightAnswer2);
+        rightanswer(2,an3,answersCircle3,thirdAnswer,rightAnswer3); 
+
         
         //based on correct answers, change image and go to the last page
         if(total == 0){

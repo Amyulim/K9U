@@ -6,15 +6,100 @@ p,body{
     font-family: 'Open Sans', sans-serif;
 }
  body{
-     background-color: #64A4C3;
-                
+     background-color: #64A4C3;            
 }
 #wrapper{
     width:100vw; 
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+#questionMark{
+    width: 40px;
+    height: auto;
+    margin: 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+#questionMark2{
+    width: 40px;
+    height: auto;
+    margin: 5px;
+    position: absolute;
+    top: 50px;
+    left: 65%;
+}
+.closeB{
+    font-family: 'Nunito', sans-serif; 
+    font-size: 1.7rem;
+    border-radius: 20px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    background-color: rgba(122,122,122,0.3)
+}
+#close2{
+    display: none;
+}
+#logo{
+    width: 200px;
+    height: auto;
+    margin: auto;
+    margin-top: 5rem;
+}
+#user{
+    width: 280px;
+    margin: auto;
+}
+#userN{
+    width: 100%;
+    height: 55px;
+    border-radius: 80px;
+    border: none;
+    margin:auto;
+    margin-top: 2rem;
+    align-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    display: inline-block;
+    }
+#saveUN{
+    width:200px;
+    font-size: 1rem;
+    height: auto;
+    margin: auto;
+    margin-top: 1rem;
+    font-family: 'Open Sans', sans-serif;  
+}
+.clickB{
+    background-color: #2A81B9;
+    color: white;
+    width: 210px;
+    height: 60px;
+    border: none;
+    border-radius: 160px;
+    display: block;
+    margin: 2rem auto 0.6rem auto ; 
+    font-size: 1.4rem;
+   
+}
+.clickB:hover{
+    background-color: #ffffff;
+    color: #2A81B9;  
+}
+a{
+    text-decoration: none;
+}
+
+
+/*--------------------- drop down menu -------------------*/
 #menuPage{
     width:100%; 
     height: 100vh;
@@ -74,19 +159,38 @@ p,body{
     background-color: #D33737;
     top: -132px;
     left: 0;
-    color: white;
 }
 #howToPlay{
     background-color: #FFDA6F;
     top: -132px;
     right: 0;
 }
+#aboutPage{
+    background-color:rgba(255,255,255,0.8);
+    width: 75%;
+    height: auto;
+    padding: 7%;
+    position: absolute;
+    top:150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: justify;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    display: none;
+    overflow: auto;
+    z-index: 6000;
+}
+#aboutPage h3{
+    text-align: center;
+}
 #aboutPage ul{
     font-size: 0.9rem;
     text-align: left;
     font-weight: 400;
 }
-#aboutPage i{
+#aboutPage .redtext{
     font-size: 0.9rem;
     color:#D33737 ;
 }
@@ -105,115 +209,10 @@ p,body{
 .menu:hover{
     color: white;
 }
-#questionMark{
-    width: 40px;
-    height: auto;
-    margin: 5px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-}
-#questionMark2{
-    width: 40px;
-    height: auto;
-    margin: 5px;
-    position: absolute;
-    top: 50px;
-    left: 65%;
-}
-#aboutPage{
-    background-color:rgba(255,255,255,0.8);
-    width: 75%;
-    height: 65%;
-    padding: 7%;
-    position: absolute;
-    top:150px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: justify;
-    font-size: 0.9rem;
-    border-radius: 10px;
-    display: none;
-    overflow: auto;
-    z-index: 6000;
-}
-#aboutPage h3{
-    text-align: center;
-}
-.closeB{
-    font-family: 'Nunito', sans-serif; 
-    font-size: 1.7rem;
-    border-radius: 20px;
-    border: none;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 100;
-}
-#close2{
-    display: none;
-}
-#logo{
-    width: 200px;
-    height: auto;
-    margin: auto;
-    margin-top: 5rem;
-}
-#user{
-    width: 280px;
-    margin: auto;
-}
-#userN{
-    width: 100%;
-    height: 55px;
-    border-radius: 80px;
-    border: none;
-    margin:auto;
-    margin-top: 2rem;
-    align-content: center;
-    text-align: center;
-    font-size: 1.5rem;
-    display: inline-block;
-    }
-#saveUN{
-    width:200px;
-    font-size: 1rem;
-    height: auto;
-    margin: auto;
-    margin-top: 1rem;
-    font-family: 'Open Sans', sans-serif;  
-}
-.clickB{
-    background-color: #2A81B9;
-    color: white;
-    width: 210px;
-    height: 60px;
-    border: none;
-    border-radius: 160px;
-    margin: auto;
-    display: block;
-    margin-bottom: 0.6rem; 
-    font-size: 1.4rem;
-}
-.clickB:hover{
-    background-color: #ffffff;
-    color: #2A81B9;  
-}
-a{
-    text-decoration: none;
-}
-#startB{
-    margin-top: 2rem;
-}
 
 /*//////////////////////////////////////////////////////////-------------------------------Media Query-------------------------------------//////////////////////////////////////////////////////////*/
         @media only screen and (min-width : 900px){
-            #menuImg{
-                 display: none;
-             }
+            
             #menu{
                 display: none;
             }
@@ -227,62 +226,20 @@ a{
                 position: absolute;
                 top:150px;
             }
-            
-           
-        /* 2 tile */
-/*
-            body{
-                background-color: #64A4C3;
-                
+            #about{
+                color: white;
             }
-            #wrapper{
-                width:100vw; 
-           
-            }
-            #logo{
-                width: 200px;
-                height: auto;
-                position: relative;   
-            }
-            #userN{
-                width: 20%;
-                height: 45px;
-                border-radius: 80px;
-                border: none;
-                position: absolute;
-                top: 55%;
-                left: 0;
-                right: 0;
-                margin: auto;
-                align-content: center;
-                text-align: center;
-                font-size: 1.5rem;
-                }
-            #saveUN{
-                width: 20%;
-                font-size: 1rem;
-                height: auto;
-                position: absolute;
-                top: 63%;
-                left: 0;
-                right: 0;
-                margin: auto;
-                font-family: 'Open Sans', sans-serif;  
-            }
-*/
    
     }
          @media only screen and (max-width : 900px) and (min-width : 550px) {
-        /* 1 tiles */
-             #menuImg{
-                 display: none;
-             }
+             
              #menu{
                 display: none;
              }
              .about-big{
-                 width: 60%;
+                 width: 55%;
                  margin: 3rem auto;
+                 padding:2rem;
                  font-size: 1rem;
                  text-align: left;  
                  position: none;
@@ -295,9 +252,7 @@ a{
     }
            
          @media only screen and (max-width :550px) and (min-width : 100px) {
-             /* 1 tiles */
-             
-        
+         
             #wrapper{
                 margin:0 auto;
                 width: 100%;
@@ -327,11 +282,8 @@ a{
                 height: 50px;
                 border-radius: 150px;
                 margin-bottom: 1rem; 
-            }
-            #startB{
-                margin-top: 3rem;
-                font-size: 1.2rem;
-                
+                margin-top: 2.5rem;
+                font-size: 1.2rem; 
             }
              #about-big{
                  display: none;

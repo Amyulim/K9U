@@ -20,8 +20,9 @@ var infoG = ["../SVG/activity-mod.svg","../SVG/brush-frequency.svg","../SVG/shib
 var myItemsArray = ["WALKING","BRUSH", "ACTIVITY","FOOD","FOOD CONSUPMSION"];
 var clickedArray = ["WALKING"];
 
+/*------------------------ progress bar -------------------------- */
 function check() {
-    /* -1 == false : 즉 어레이안에 없음을 의미*/
+
     if(clickedArray.indexOf(itemName.innerHTML) == -1) {
         
         clickedArray.push(itemName.innerHTML);
@@ -29,8 +30,11 @@ function check() {
         document.getElementById("progress").style.width = Cprogress + "px";
     }
 }
+
+/*------------------------ next or back button -> change contents -------------------------- */
 function slide() {
      if(clicked == 0){
+         
         //change top icons
         house.src = "../SVG/house-colored.svg";
         toy.src = "../SVG/toys.svg";
@@ -59,6 +63,7 @@ function slide() {
         infographic.src = infoG[1];
         
     } else if(clicked == 2) {
+        
         //change top icons
         house.src = "../SVG/house.svg";
         toy.src = "../SVG/toys-colored.svg";
@@ -73,6 +78,7 @@ function slide() {
         infographic.src = infoG[2];
         
     } else if(clicked == 3) {
+        
         //change top icons
         house.src = "../SVG/house.svg";
         toy.src = "../SVG/toys.svg";
@@ -86,7 +92,10 @@ function slide() {
         infographic.src = infoG[3];
         
     } else if(clicked == 4) {
+        
+        //make the next button disappear 
         NextArrow.style.display="block";
+        
         //change top icons
         house.src = "../SVG/house.svg";
         toy.src = "../SVG/toys.svg";
@@ -100,6 +109,8 @@ function slide() {
         infographic.src = infoG[4];
         
     } else if(clicked == 5) {
+        
+        //make the next button disappear 
         NextArrow.style.display="none";
         
         //change top icons
@@ -118,10 +129,7 @@ function slide() {
 
     
 NextArrow.addEventListener("click", function () {
-    
-    //console.log(clickedArray);
-    //console.log(Cprogress);
-    
+      
     clicked++;   
     PrevArrow.style.display="block";
     slide();
@@ -130,15 +138,17 @@ NextArrow.addEventListener("click", function () {
 });
 
 PrevArrow.addEventListener("click", function() { 
+    
     clicked--;
     slide()
     check()
+   
     if(clicked == 0){
         PrevArrow.style.display="none";
     }
 });
 
-//When top icon clicked --> change slide contens and icon
+/*------------------------ When top icon clicked --> change slide contens and icons ------------------------*/
 house.addEventListener("click", function () {
      
     clicked = 0;

@@ -20,8 +20,8 @@ var infoG = ["../SVG/activity-low.svg","../SVG/brush-frequency.svg","../SVG/bull
 var myItemsArray = ["WALKING","BRUSH", "ACTIVITY","FOOD","FOOD CONSUPMSION"];
 var clickedArray = ["WALKING"];
 
+/*------------------------ progress bar -------------------------- */
 function check() {
-    /* -1 == false : 즉 어레이안에 없음을 의미*/
     if(clickedArray.indexOf(itemName.innerHTML) == -1) {
         
         clickedArray.push(itemName.innerHTML);
@@ -29,8 +29,11 @@ function check() {
         document.getElementById("progress").style.width = Cprogress + "px";
     }
 }
+
+/*------------------------ next or back button -> change contents -------------------------- */
 function slide() {
      if(clicked == 0){
+         
         //change top icons
         house.src = "../SVG/house-colored.svg";
         toy.src = "../SVG/toys.svg";
@@ -86,7 +89,10 @@ function slide() {
         infographic.src = infoG[3];
         
     } else if(clicked == 4) {
+        
+        //make the next button disappear 
         NextArrow.style.display="block";
+        
         //change top icons
         house.src = "../SVG/house.svg";
         toy.src = "../SVG/toys.svg";
@@ -100,6 +106,8 @@ function slide() {
         infographic.src = infoG[4];
         
     } else if(clicked == 5) {
+        
+        //make the next button disappear 
         NextArrow.style.display="none";
         
         //change top icons
@@ -119,9 +127,6 @@ function slide() {
     
 NextArrow.addEventListener("click", function () {
     
-    //console.log(clickedArray);
-    //console.log(Cprogress);
-    
     clicked++;   
     PrevArrow.style.display="block";
     slide();
@@ -130,9 +135,11 @@ NextArrow.addEventListener("click", function () {
 });
 
 PrevArrow.addEventListener("click", function() { 
+    
     clicked--;
     slide()
     check()
+    
     if(clicked == 0){
         PrevArrow.style.display="none";
     }
@@ -165,6 +172,7 @@ house.addEventListener("click", function () {
 toy.addEventListener("click", function (){
     
     clicked = 2;
+    
     NextArrow.style.display = "block";
     PrevArrow.style.display = "block";
     
@@ -188,6 +196,7 @@ toy.addEventListener("click", function (){
 food.addEventListener("click", function () {
     
     clicked = 3;
+    
     NextArrow.style.display = "block";
     PrevArrow.style.display = "block";
    

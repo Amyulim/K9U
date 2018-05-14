@@ -1,7 +1,15 @@
 var answerLists = ["60 Minutes","Slicker brush, Comb, Nail Clipper,","<h2>$40 ~ $45</h2>"];
 var myanswerList = [];
+
+//brush quiz part --> not text, image answer lists
 var brushAnswer = ["Comb", "Nail Clipper", "Sliker brush"];
 var mybrushAnswer = [];
+var brush1Clicked = 0,
+    brush2Clicked = 0,
+    brush3Clicked = 0,
+    brush4Clicked = 0,
+    brush5Clicked = 0;
+
 var display = document.getElementById("display"),
     item1 = document.getElementById("item1"),
     quizDes = document.getElementById("quizDescript"),
@@ -25,11 +33,7 @@ var display = document.getElementById("display"),
     total = 0,
     num1 = 0,
     num2 = 5;
-var brush1Clicked = 0,
-    brush2Clicked = 0,
-    brush3Clicked = 0,
-    brush4Clicked = 0,
-    brush5Clicked = 0;
+
  
 //If the user choose right answers, add total score and make result box green
 //If not, don't add and make result box red
@@ -47,6 +51,8 @@ function rightanswer(i,anNum,circle,box,rightanswerdiv) {
         circle.src = "../SVG/answer-wrong.svg"
     }
 }
+
+//check user's answer list array with right answer list 
 function brushrightanswer() {
     if(mybrushAnswer[0] == (brushAnswer[0]) && mybrushAnswer[1]== brushAnswer[1] && mybrushAnswer[2]== brushAnswer[2]){
         an2.innerHTML += "Correct";
@@ -58,6 +64,21 @@ function brushrightanswer() {
         rightAnswer2.innerHTML = "<i> <b>Comb, Nail Clipper, Sliker brush </b>is the right answer.</i>"
         secondAnswer.style.border = "3px solid #D33737";
         answersCircle2.src = "../SVG/answer-wrong.svg"
+    }
+}
+
+//when clicked, change images to colored one and make animation none.
+function brushes(a,b,c,d){
+    
+    if(a ==1 ){
+        b.src=c;
+        b.style.transform="scale(1.2)"
+        b.style.animation = "none";
+    } else if(a ==2){
+        b.src = d;
+        b.style.transform="scale(1)"
+        b.style.animation = "big 2s infinite";
+        a = 0;
     }
 }
 
@@ -102,12 +123,11 @@ thirdAnswer.addEventListener("click", function () {
         unclicked(answersCircle2,secondAnswer);      
     }
 });
-    console.log(mybrushAnswer)
+  
 nextQuiz.addEventListener("click", function () {
-    clickedNum ++;
-    console.log(an);
-
     
+    clickedNum ++;
+
     //push the clicked answer to array 
     if(an == 1){
         if(clickedNum == 2){
@@ -144,12 +164,14 @@ nextQuiz.addEventListener("click", function () {
     
     //Go to the next Quiz
     if(clickedNum == 1){
+        
         //quiz progress - change circle color
         quiz2.style.backgroundColor = "#D33737";
         
         item1.src="../SVG/quiz-brush.svg";
         quizDes.innerHTML = "<b>Q2.</b> What types of brushes are suitable for Shiba Inu? ";
 
+        //make answer boxes disapper except first one
         an1.innerHTML = "";
         an1.style.marginBottom="1rem";
         
@@ -157,6 +179,7 @@ nextQuiz.addEventListener("click", function () {
         thirdAnswer.style.display="none";
         answersCircle1.style.display="none";
         
+        //create image answer lists
         var brush1 =document.createElement("img");
         var brush2 =document.createElement("img");  
         var brush3 =document.createElement("img");  
@@ -182,7 +205,7 @@ nextQuiz.addEventListener("click", function () {
         firstAnswer.appendChild(brush5);
         
         
-        
+        //when the brush images clicked, add the one clicked to the array 
         brush1.addEventListener("click", function() {
             brush1Clicked ++;
 
@@ -191,13 +214,6 @@ nextQuiz.addEventListener("click", function () {
             if(brush1Clicked == 2){
                 brush1Clicked = 0;
             }
-
-//            if(brush1Clicked ==1 ){
-//                brush1.src="../SVG/comb2.svg";
-//            } else if(brush1Clicked ==2){
-//                brush1.src="../SVG/comb2-grey.svg";
-//                brush1Clicked = 0;
-//            }
             
         });
         
@@ -230,7 +246,9 @@ nextQuiz.addEventListener("click", function () {
         
         brush5.addEventListener("click", function() {
             brush5Clicked ++;
+            
             brushes(brush5Clicked, brush5,"../SVG/brush.svg","../SVG/brush-grey.svg")
+            
             if(brush5Clicked == 2){
                 brush5Clicked = 0;
             }
@@ -238,6 +256,8 @@ nextQuiz.addEventListener("click", function () {
         
         
     }else if(clickedNum == 2){
+        
+        //remove brush image for the last question
         document.getElementById("brush1").remove();
         document.getElementById("brush2").remove();
         document.getElementById("brush3").remove();
@@ -250,10 +270,12 @@ nextQuiz.addEventListener("click", function () {
         item1.src="../SVG/quiz-food.svg";
         quizDes.innerHTML = "<b>Q3.</b> How much is the expected monthly food cost for Shiba Inu? <br/><span id='i'><i>*click the money icons</i></span>";
         
+        //make answer boxes disapper except first one
         secondAnswer.style.display="none";
         thirdAnswer.style.display="none";
         answersCircle1.style.display="none";
         
+        //create image for money
         var money2 =document.createElement("img");
         var money =document.createElement("img");  
         
@@ -267,6 +289,7 @@ nextQuiz.addEventListener("click", function () {
 
         an1.innerHTML = "<h2 id='MyAnswerNum'>$"+ parseInt(num1)+" ~ $"+parseInt(num2)+"</h2>";
         
+        //when plus money clicked, add 
         money.addEventListener("click", function(){
             num1 += 5;
             num2 += 5;
@@ -274,6 +297,8 @@ nextQuiz.addEventListener("click", function () {
             
             an1.innerHTML = "<h2>$"+ parseInt(num1)+" ~ $"+parseInt(num2)+"</h2>"; 
         });
+        
+        //when minus money clicked, minus
         money2.addEventListener("click", function() {
                 num1 -= 5;
                 num2 -= 5;
@@ -294,8 +319,8 @@ nextQuiz.addEventListener("click", function () {
         an2.innerHTML = "Q2. "
         an3.innerHTML = "Q3. "
        
+        //compared user's answer array with correct answer array
         rightanswer(0,an1,answersCircle1,firstAnswer,rightAnswer1);
-//        rightanswer(1,an2,answersCircle2,secondAnswer,rightAnswer2);
         brushrightanswer()
         rightanswer(2,an3,answersCircle3,thirdAnswer,rightAnswer3); 
         
@@ -324,16 +349,3 @@ nextQuiz.addEventListener("click", function () {
     }
 });
 
-function brushes(a,b,c,d){
-    
-    if(a ==1 ){
-        b.src=c;
-        b.style.transform="scale(1.2)"
-        b.style.animation = "none";
-    } else if(a ==2){
-        b.src = d;
-        b.style.transform="scale(1)"
-        b.style.animation = "big 2s infinite";
-        a = 0;
-    }
-}
