@@ -9,7 +9,7 @@ p,body{
      background-color: #64A4C3;            
 }
 #wrapper{
-    width:100vw; 
+    width:100%; 
     height: 100vh;
     margin: 0;
     position: absolute;
@@ -99,7 +99,7 @@ a{
 }
 
 
-/*--------------------- drop down menu -------------------*/
+/*--------------------- drop down menu & -------------------*/
 #menuPage{
     width:100%; 
     height: 100vh;
@@ -122,9 +122,13 @@ a{
     padding: 0;
     z-index: 50;
 }
+#k9u-meaning{
+    width: 70%;
+    margin: 0 15%;
+}
 #about-big{
     display: none;
-    width: 100%;
+    width: 100vw;
     height: auto;
     position: absolute;
     top: 0;
@@ -135,7 +139,6 @@ a{
 .about-big h3{
     font-size: 1.5rem;
     text-align: center;
-    color:#D33737;
 }
 .about-big{
     background-color:rgba(255,255,255,0.9);
@@ -192,6 +195,8 @@ a{
 }
 #aboutPage .redtext{
     font-size: 0.9rem;
+}
+.redtext{
     color:#D33737 ;
 }
 .menu{
@@ -226,26 +231,48 @@ a{
                 position: absolute;
                 top:150px;
             }
+            #k9u-meaning{
+                width: 50%;
+                margin: 0 25%;
+            }
             #about{
                 color: white;
             }
+            #content h3{
+                 font-size: 1.8rem;
+            }
+            #aboutPage{
+                font-size:1.3rem;
+                width: 40%;
+            }
+            #menuPage{
+                display: none;
+            }
    
     }
-         @media only screen and (max-width : 900px) and (min-width : 550px) {
-             
+         @media only screen and (max-width : 899px) and (min-width : 550px) {
              #menu{
                 display: none;
+             }
+             #about-big{
+                 width: 100%;
              }
              .about-big{
                  width: 55%;
                  margin: 3rem auto;
-                 padding:2rem;
+                 padding:5%;
                  font-size: 1rem;
                  text-align: left;  
                  position: none;
              }
              #questionMark{
                  display: none;
+             }
+             #content h3{
+                 font-size: 1.5rem;
+             }
+             #aboutPage{
+                 font-size:1.1rem;
              }
        
       

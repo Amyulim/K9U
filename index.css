@@ -331,6 +331,11 @@ button, input{
     top: 0;
     left: 0;
 }
+#Doganmi{
+    display: inline-block;
+    cursor: pointer;
+    background-color: aqua;
+}
 #dogN{
     display: inline-block;
     position: absolute;

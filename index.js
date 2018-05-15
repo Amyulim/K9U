@@ -30,7 +30,7 @@ document.getElementById("about").addEventListener("click", function () {
     document.getElementById("howToPlay").style.color = "black";
     
     document.getElementById("aboutPage").style.display="block";
-    document.getElementById("content").innerHTML = "<h3> About K9U</h3><p>K9 University is a free mobile app that teaches you step by step basic and advanced knowledge on how to look after a dog in the most convenient way possible. The purpose of this app is to prepare future dog owners on the responsibility and care for the specific breed they wish to adopt.<br /><br/><b> Made by AmySeo &amp; Sierra Schuss </b></p>"
+    document.getElementById("content").innerHTML = "<h3> About K9U</h3><img id='k9u-meaning' src='SVG/K9U-meaning.svg'/><p>K9 University is a free mobile app that teaches you step by step basic and advanced knowledge on how to look after a dog in the most convenient way possible. The purpose of this app is to prepare future dog owners on the responsibility and care for the specific breed they wish to adopt.<br /><br/><b> <br/><br/>Made by AmySeo &amp; Sierra Schuss </b></p>"
 });
 
 document.getElementById("howToPlay").addEventListener("click", function () {

@@ -14,7 +14,7 @@ var NextArrow = document.getElementById("NextArrow"),
 
 var currentPosition = 0;
 var clicked = 0;
-var foodImages = ["../SVG/leash.svg", "../SVG/comb.svg","../SVG/frisbee.svg", "../SVG/foodbag.svg", "../SVG/dogplate.svg", "../SVG/pug-completed.svg"];
+var foodImages = ["../SVG/leash.svg", "../SVG/comb.svg","../SVG/frisbee.svg", "../SVG/foodbag.svg", "../SVG/dogplate.svg", "../SVG/beagle-complete.svg"];
 var Cprogress = 30;
 var infoG = ["../SVG/activity-mod.svg","../SVG/brush-frequency.svg","../SVG/shiba-activity.svg","../SVG/empty.svg","../SVG/beagle-food-consumption.svg"];
 var myItemsArray = ["WALKING","BRUSH", "ACTIVITY","FOOD","FOOD CONSUPMSION"];
