@@ -74,7 +74,7 @@ function slide() {
         complete.innerHTML="";
         document.getElementById("eachItemImg").style.width = "38%";
         itemName.innerHTML = "ACTIVITY";
-        itemDetails.innerHTML = "<b>40mins</b> are recommended acivities time per day.<br />";
+        itemDetails.innerHTML = "<b>40mins per day</b> is the recommended acivity time for a Pug.<br />";
         infographic.src = infoG[2];
         
     } else if(clicked == 3) {
@@ -192,7 +192,7 @@ toy.addEventListener("click", function (){
     complete.innerHTML="";
     document.getElementById("eachItemImg").style.width = "38%";
     itemName.innerHTML = "ACTIVITY";
-    itemDetails.innerHTML = "<b>40mins</b> are recommended acivities time per day.<br />";
+    itemDetails.innerHTML = "<b>40mins per day</b> is the recommended acivity time for a Pug.<br />";
     
     infographic.src = infoG[2];
     

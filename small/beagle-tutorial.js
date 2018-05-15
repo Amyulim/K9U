@@ -74,7 +74,7 @@ function slide() {
         complete.innerHTML="";
         document.getElementById("eachItemImg").style.width = "38%";
         itemName.innerHTML = "ACTIVITY";
-        itemDetails.innerHTML = "<b>60mins</b> are recommended acivities time per day.<br />";
+        itemDetails.innerHTML = "<b>60mins per day</b> is recommended acivity time for a Beagle.<br />";
         infographic.src = infoG[2];
         
     } else if(clicked == 3) {
@@ -188,7 +188,7 @@ toy.addEventListener("click", function (){
     complete.innerHTML="";
     document.getElementById("eachItemImg").style.width = "38%";
     itemName.innerHTML = "ACTIVITY";
-    itemDetails.innerHTML = "<b>60mins</b> are recommended acivities time per day.<br />";
+    itemDetails.innerHTML = "<b>60mins per day</b> is recommended acivity time for a Beagle.<br /><br />";
     infographic.src = infoG[2];
     
     check()

@@ -169,7 +169,7 @@ nextQuiz.addEventListener("click", function () {
         quiz2.style.backgroundColor = "#D33737";
         
         item1.src="../SVG/quiz-brush.svg";
-        quizDes.innerHTML = "<b>Q2.</b> What types of brushes are suitable for Shiba Inu? ";
+        quizDes.innerHTML = "<b>Q2.</b> What types of brushes and clippers are suitable for a Bulldog? ";
 
         //make answer boxes disapper except first one
         an1.innerHTML = "";

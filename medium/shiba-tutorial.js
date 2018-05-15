@@ -72,7 +72,7 @@ function slide() {
         complete.innerHTML="";
         document.getElementById("eachItemImg").style.width = "38%";
         itemName.innerHTML = "ACTIVITY";
-        itemDetails.innerHTML = "<b>60mins</b> are recommended acivities time per day.<br />";
+        itemDetails.innerHTML = "<b>60mins per day</b> is recommended acivity time for a Shiba Inu.<br />";
         infographic.src = infoG[2];
         
     } else if(clicked == 3) {
@@ -190,7 +190,7 @@ toy.addEventListener("click", function (){
     complete.innerHTML="";
     document.getElementById("eachItemImg").style.width = "38%";
     itemName.innerHTML = "TOYS";
-    itemDetails.innerHTML = "<b>60mins</b> are recommended acivities time per day.<br />Tennis Ball Rope Tug Frisbee";
+    itemDetails.innerHTML = "<b>60mins per day</b> is recommended acivity time for a Shiba Inu.<br />";
     
     infographic.src = infoG[2];
     

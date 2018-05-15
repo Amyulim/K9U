@@ -109,7 +109,7 @@ nextQuiz.addEventListener("click", function () {
         quiz2.style.backgroundColor = "#D33737";
         
         item1.src="../SVG/quiz-brush.svg";
-        quizDes.innerHTML = "<b>Q2.</b> What types of brushes are suitable for Beagle? ";
+        quizDes.innerHTML = "<b>Q2.</b> What types of brushes and clippers are suitable for a Beagle?  ";
 
         an1.innerHTML = "Slicker Brush and Nail Clipper";
         an2.innerHTML = "Pin Brush, Scissors, and Nail Clipper";

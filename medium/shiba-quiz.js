@@ -169,7 +169,7 @@ nextQuiz.addEventListener("click", function () {
         quiz2.style.backgroundColor = "#D33737";
         
         item1.src="../SVG/quiz-brush.svg";
-        quizDes.innerHTML = "<b>Q2.</b> What types of brushes are suitable for Shiba Inu? ";
+        quizDes.innerHTML = "<b>Q2.</b> <b>Q2.</b> What types of brushes and clippers are suitable for a Shiba Inu?  ";
 
         //make answer boxes disapper except first one
         an1.innerHTML = "";
@@ -268,7 +268,7 @@ nextQuiz.addEventListener("click", function () {
         quiz3.style.backgroundColor = "#D33737";
         
         item1.src="../SVG/quiz-food.svg";
-        quizDes.innerHTML = "<b>Q3.</b> How much is the expected monthly food cost for Shiba Inu? <br/><span id='i'><i>*click the money icons</i></span>";
+        quizDes.innerHTML = "<b>Q3.</b> How much is the expected monthly food cost for a Shiba Inu? <br/><span id='i'><i>*click the money icons</i></span>";
         
         //make answer boxes disapper except first one
         secondAnswer.style.display="none";

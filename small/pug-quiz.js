@@ -110,7 +110,7 @@ nextQuiz.addEventListener("click", function () {
         quiz2.style.backgroundColor = "#D33737";
         
         item1.src="../SVG/quiz-brush.svg";
-        quizDes.innerHTML = "<b>Q2.</b> What types of brushes are suitable for pug? ";
+        quizDes.innerHTML = "<b>Q2.</b> What types of brushes and clippers are suitable for a Pug? ";
 
         an1.innerHTML = "Slicker Brush, comb, Nail Clipper";
         an2.innerHTML = "Slicker Brush, Scissors, Nail Clipper";
@@ -122,7 +122,7 @@ nextQuiz.addEventListener("click", function () {
         quiz3.style.backgroundColor = "#D33737";
         
         item1.src="../SVG/quiz-food.svg";
-        quizDes.innerHTML = "<b>Q3.</b> How much is the expected monthly food cost for pug? <br/><span id='i'><i>*click the money icons</i></span>";
+        quizDes.innerHTML = "<b>Q3.</b> How much is the expected monthly food cost for a Pug? <br/><span id='i'><i>*click the money icons</i></span>";
         
         //make answer boxes disapper except first one
         secondAnswer.style.display="none";
