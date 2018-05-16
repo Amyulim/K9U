@@ -43,7 +43,7 @@ function slide() {
         item1.src = foodImages[0];
         complete.innerHTML="";
         itemName.innerHTML = "WALKING";
-        itemDetails.innerHTML =  "Make sure let shiba Inu walk 8miles per week." ;
+        itemDetails.innerHTML =  "Make sure let shiba Inu walk <b>8miles per week.</b>" ;
         infographic.src = infoG[0];
         
     } else if(clicked == 1){
@@ -165,7 +165,7 @@ house.addEventListener("click", function () {
     item1.src = foodImages[0];
     complete.innerHTML="";
     itemName.innerHTML = "WALKING";
-    itemDetails.innerHTML =  "Make sure let shiba Inu walk 8miles per week." ;
+    itemDetails.innerHTML =  "Make sure let Shiba Inu walk <b>8miles per week.</b>" ;
     
     infographic.src = infoG[0]
     
